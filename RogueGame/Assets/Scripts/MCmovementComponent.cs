@@ -1,26 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MCmovementComponent : MonoBehaviour
 {
-    private float movementSpeed = 7.5f;
-    public GameObject MainCharacter;
-    // Start is called before the first frame update
-    void Start()
+    public InputAction moveX;
+    public InputAction moveY;
+    public float movementSpeed = 1;
+    
+    private bool isMovingX = false;
+    private bool isMovingY = false;
+
+    void Awake()
     {
-        MainCharacter = GameObject.Find("Personnage");
+        moveX.Enable();
+        moveX.started += _ => isMovingX = true;
+        moveX.canceled += _ => isMovingX = false;
+
+        moveY.Enable();
+        moveY.started += _ => isMovingY = true;
+        moveY.canceled += _ => isMovingY = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-       //get the Input from Horizontal axis
-        float horizontalInput = Input.GetAxis("Horizontal");
-        //get the Input from Vertical axis
-        float verticalInput = Input.GetAxis("Vertical");
+        float deltaX = moveX.ReadValue<float>();
+        float deltaY = moveY.ReadValue<float>();
 
-        //update the position
-        MainCharacter.transform.position = MainCharacter.transform.position + new Vector3(horizontalInput * movementSpeed * Time.deltaTime, verticalInput * movementSpeed * Time.deltaTime, 0);
+        if (isMovingX)
+            Move(new Vector2(deltaX, 0));
+        if (isMovingY )
+            Move(new Vector2(0, deltaY));
+    }
+    private void Move(Vector3 delta)
+    {
+        transform.Translate(delta * (movementSpeed * Time.deltaTime));
+        
     }
 }
