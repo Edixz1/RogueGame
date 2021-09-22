@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4236578280035167559}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ennemie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108327186384229522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.3963165, y: -1.7036211, z: -216.27853}
+  m_LocalPosition: {x: -4.3963165, y: -1.7036211, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6572787508297169493}
@@ -41,8 +41,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6572787508297169493}
   - component: {fileID: 882878389562116330}
-  - component: {fileID: 9026720071152450541}
-  m_Layer: 0
+  - component: {fileID: 1668627556807652321}
+  - component: {fileID: 3329298734214636020}
+  m_Layer: 6
   m_Name: CandyCorn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,16 +116,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &9026720071152450541
-BoxCollider:
+--- !u!61 &1668627556807652321
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4509030443729405200}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.040509284, y: -0.017361134}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 1.28, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4768976, y: 0.61390996, z: 0.2}
-  m_Center: {x: 0.047427356, y: -0.012647271, z: 0}
+  m_Size: {x: 0.45824063, y: 0.6202777}
+  m_EdgeRadius: 0
+--- !u!50 &3329298734214636020
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4509030443729405200}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
