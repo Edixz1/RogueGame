@@ -215,10 +215,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3742436198010554655, guid: f833c255371d0f747b4b9232deca3180,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4961643501956763845, guid: f833c255371d0f747b4b9232deca3180,
         type: 3}
       propertyPath: m_Name
       value: Joeur
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961643501956763845, guid: f833c255371d0f747b4b9232deca3180,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7706922108067631057, guid: f833c255371d0f747b4b9232deca3180,
         type: 3}
@@ -901,32 +911,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 14555485}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &276712016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 276712015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee13dd163c5a1b4a86cf5930a023816, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 10
-  rb: {fileID: 1618026332}
---- !u!114 &276712017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 276712015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fec7904887bf1324682b442d8fc94e37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &276712018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -955,7 +939,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 276712016}
+      - m_Target: {fileID: 1618026335}
         m_TargetAssemblyTypeName: PlayerComponent, Assembly-CSharp
         m_MethodName: Move
         m_Mode: 0
@@ -4498,12 +4482,35 @@ BoxCollider2D:
     type: 3}
   m_PrefabInstance: {fileID: 1814320602}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1618026330 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3742436198010554655, guid: f833c255371d0f747b4b9232deca3180,
+    type: 3}
+  m_PrefabInstance: {fileID: 14555485}
+  m_PrefabAsset: {fileID: 0}
 --- !u!50 &1618026332 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 1076389887387632737, guid: f833c255371d0f747b4b9232deca3180,
     type: 3}
   m_PrefabInstance: {fileID: 14555485}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1618026335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618026330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dee13dd163c5a1b4a86cf5930a023816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 10
+  ennemiLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  rb: {fileID: 1618026332}
 --- !u!4 &1629418235 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8554109529814078090, guid: fa1ddb7bde2ae8943af172624db73bfa,
@@ -6470,6 +6477,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1668627556807652321, guid: 41da4314cf1b3754283c5cdbc32e9dbb,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2108327186384229522, guid: 41da4314cf1b3754283c5cdbc32e9dbb,
         type: 3}
       propertyPath: m_Name

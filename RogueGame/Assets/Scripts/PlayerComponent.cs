@@ -45,6 +45,7 @@ public class PlayerComponent : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //if()
         Debug.Log("ok");
     }
 }
