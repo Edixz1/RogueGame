@@ -8,7 +8,8 @@ public class MCmovementComponent : MonoBehaviour
     public InputAction moveX;
     public InputAction moveY;
     public float movementSpeed = 1;
-    
+    public Rigidbody2D rb;
+
     private bool isMovingX = false;
     private bool isMovingY = false;
 
@@ -28,15 +29,20 @@ public class MCmovementComponent : MonoBehaviour
     {
         float deltaX = moveX.ReadValue<float>();
         float deltaY = moveY.ReadValue<float>();
+        Debug.Log("X" + isMovingX);
+        Debug.Log("Y" + isMovingY);
+        if (isMovingX || isMovingY)
+            rb.velocity = new Vector2(deltaX, 0) * movementSpeed;
+        else
+            rb.velocity = new Vector2(0, 0) * movementSpeed;
+        if (isMovingY)
+            rb.velocity = new Vector2(0, deltaY) * movementSpeed;
+        else
+            rb.velocity = new Vector2(0, 0) * movementSpeed;
+        //if (isMovingY)
+        // Move(new Vector2(0, deltaY));
 
-        if (isMovingX)
-            Move(new Vector2(deltaX, 0));
-        if (isMovingY )
-            Move(new Vector2(0, deltaY));
     }
-    private void Move(Vector3 delta)
-    {
-        transform.Translate(delta * (movementSpeed * Time.deltaTime));
-        
-    }
+    //private void Move(Vector2 delta) => ;
+    
 }
