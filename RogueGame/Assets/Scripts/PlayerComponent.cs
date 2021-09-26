@@ -45,7 +45,9 @@ public class PlayerComponent : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //if()
         Debug.Log("ok");
+
+        if (gameObject.layer == 6)
+            Debug.Log("ok2");
     }
 }
