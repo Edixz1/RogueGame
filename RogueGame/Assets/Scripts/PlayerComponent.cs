@@ -11,6 +11,7 @@ public class PlayerComponent : MonoBehaviour
 
     private float horizontal;
     private float vertical;
+    private float lastLooking;
     private bool isFacingRight = true;
 
 
@@ -41,6 +42,11 @@ public class PlayerComponent : MonoBehaviour
     {
         horizontal = context.ReadValue<Vector2>().x;
         vertical = context.ReadValue<Vector2>().y;
+    }
+
+    public void Dash(InputAction.CallbackContext context)
+    {
+        movementSpeed = movementSpeed * 2;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
