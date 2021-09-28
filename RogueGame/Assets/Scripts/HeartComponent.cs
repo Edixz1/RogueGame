@@ -1,26 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HeartComponent : MonoBehaviour
 {
-    public GameObject heart1, heart2, heart3, gameOver;
-    public int health;
+    public GameObject heart, gameOver;
+    public Gradient gradient;
+    public static float health;
+    public Slider slider;
+    public Image fill;
     // Start is called before the first frame update
     void Start()
     {
-        health = 3;
-        heart1.gameObject.SetActive(true);
+        health = 1;
+        slider.maxValue = health;
+        slider.value = health;
+        fill.color = gradient.Evaluate(1f);
+        /*heart1.gameObject.SetActive(true);
         heart2.gameObject.SetActive(true);
         heart3.gameObject.SetActive(true);
 
-        gameOver.gameObject.SetActive(false);
+        gameOver.gameObject.SetActive(false);*/
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        slider.value = health;
+        fill.color = gradient.Evaluate(slider.normalizedValue);
+        if(health <= 0)
+        {
+            gameOver.gameObject.SetActive(true);
+            Time.timeScale = 0;
+        }
+            
+        /*
         if (health > 3) health = 3;
         switch (health)
         {
@@ -43,9 +59,8 @@ public class HeartComponent : MonoBehaviour
                 heart1.gameObject.SetActive(false);
                 heart2.gameObject.SetActive(false);
                 heart3.gameObject.SetActive(false);
-                gameOver.gameObject.SetActive(true);
                 Time.timeScale = 0;
                 break;
-        }
+        }*/
     }
 }
