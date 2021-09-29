@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class HeartComponent : MonoBehaviour
 {
     public GameObject heart, gameOver;
+    public Sprite Dent1, Dent2, Dent3, Dent4, Dent5;
     public Gradient gradient;
     public static float health;
     public Slider slider;
@@ -30,6 +31,7 @@ public class HeartComponent : MonoBehaviour
     {
         slider.value = health;
         fill.color = gradient.Evaluate(slider.normalizedValue);
+        Debug.Log(slider.normalizedValue);
         if(health <= 0)
         {
             gameOver.gameObject.SetActive(true);

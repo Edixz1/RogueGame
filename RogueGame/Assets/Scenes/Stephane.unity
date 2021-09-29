@@ -3249,6 +3249,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heart: {fileID: 2028751508}
   gameOver: {fileID: 936162804}
+  Dent1: {fileID: 21300000, guid: 25b15e96aa2e165408b41cf1f2dc5d03, type: 3}
+  Dent2: {fileID: 21300000, guid: 411dd295f25e7794ca27c980c69b6fe9, type: 3}
+  Dent3: {fileID: 21300000, guid: 34c797766e2885945b00085e3ce27939, type: 3}
+  Dent4: {fileID: 21300000, guid: 6edf1cb3ff86658429a1b62e1718a90a, type: 3}
+  Dent5: {fileID: 21300000, guid: c2d8b460c551f76468bf522c10825900, type: 3}
   gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.14044955, b: 0, a: 1}
