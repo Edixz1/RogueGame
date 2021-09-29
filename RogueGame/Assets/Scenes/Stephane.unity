@@ -1210,7 +1210,7 @@ PrefabInstance:
     - target: {fileID: 8554109529814078090, guid: fa1ddb7bde2ae8943af172624db73bfa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.85
+      value: -8.16
       objectReference: {fileID: 0}
     - target: {fileID: 8554109529814078090, guid: fa1ddb7bde2ae8943af172624db73bfa,
         type: 3}
@@ -4912,13 +4912,13 @@ CompositeCollider2D:
         Y: 31599998
   - m_Collider: {fileID: 2054356951}
     m_ColliderPaths:
-    - - X: -67700301
+    - - X: -70800293
         Y: 30900002
-      - X: -67700301
+      - X: -70800293
         Y: 52500000
-      - X: -89300000
+      - X: -92400000
         Y: 52499707
-      - X: -89299707
+      - X: -92399707
         Y: 30900002
   m_CompositePaths:
     m_Paths:
@@ -4926,10 +4926,10 @@ CompositeCollider2D:
       - {x: 7.8899407, y: 5.3199997}
       - {x: 5.7299995, y: 5.319941}
       - {x: 5.7300587, y: 3.1599998}
-    - - {x: -6.770059, y: 3.0900002}
-      - {x: -6.770059, y: 5.25}
-      - {x: -8.93, y: 5.249942}
-      - {x: -8.929942, y: 3.0900002}
+    - - {x: -7.0800586, y: 3.0900002}
+      - {x: -7.0800586, y: 5.25}
+      - {x: -9.24, y: 5.249942}
+      - {x: -9.239942, y: 3.0900002}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &1722385935
@@ -6616,7 +6616,7 @@ PrefabInstance:
     - target: {fileID: 2108327186384229522, guid: 41da4314cf1b3754283c5cdbc32e9dbb,
         type: 3}
       propertyPath: m_Name
-      value: Ennemie
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 2108327186384229522, guid: 41da4314cf1b3754283c5cdbc32e9dbb,
         type: 3}
