@@ -36,9 +36,9 @@ public class HeartComponent : MonoBehaviour
             Time.timeScale = 0;
         }
             
-        /*
-        if (health > 3) health = 3;
-        switch (health)
+        
+        if (health > 1) health = 1;
+        /*switch (health)
         {
             case 3:
                 heart1.gameObject.SetActive(true);
