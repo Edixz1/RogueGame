@@ -5660,6 +5660,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1076389887387632737, guid: f833c255371d0f747b4b9232deca3180,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3742436198010554655, guid: f833c255371d0f747b4b9232deca3180,
         type: 3}
       propertyPath: m_Layer
@@ -7068,6 +7073,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108327186384229522, guid: 41da4314cf1b3754283c5cdbc32e9dbb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4236578280035167559, guid: 41da4314cf1b3754283c5cdbc32e9dbb,
         type: 3}
