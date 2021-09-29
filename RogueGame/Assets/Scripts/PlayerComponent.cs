@@ -53,8 +53,9 @@ public class PlayerComponent : MonoBehaviour
     public void Dash(InputAction.CallbackContext context)
     {
         Debug.Log(lastMovement);
-            //rb.velocity = new Vector2(horizontal * dashDistance,vertical*dashDistance);
-
+        //rb.velocity = new Vector2(horizontal * dashDistance,vertical*dashDistance);
+        Debug.Log("X : " + lastMovement.x);
+        Debug.Log("Y : " + lastMovement.y);
     }
     
 
