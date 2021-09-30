@@ -47,7 +47,15 @@ public class HeartComponent : MonoBehaviour
                 Dent4.gameObject.SetActive(false);
             break;
 
-            case 6:
+            case 8:
+                Dent.gameObject.SetActive(true);
+                Dent1.gameObject.SetActive(false);
+                Dent2.gameObject.SetActive(false);
+                Dent3.gameObject.SetActive(false);
+                Dent4.gameObject.SetActive(false);
+                break;
+
+            case 7:
                 Dent.gameObject.SetActive(false);
                 Dent1.gameObject.SetActive(true);
                 Dent2.gameObject.SetActive(false);
@@ -55,7 +63,7 @@ public class HeartComponent : MonoBehaviour
                 Dent4.gameObject.SetActive(false);
                 break;
 
-            case 4:
+            case 5:
                 Dent.gameObject.SetActive(false);
                 Dent1.gameObject.SetActive(false);
                 Dent2.gameObject.SetActive(true);
@@ -63,7 +71,7 @@ public class HeartComponent : MonoBehaviour
                 Dent4.gameObject.SetActive(false);
                 break;
 
-            case 2:
+            case 3:
                 Dent.gameObject.SetActive(false);
                 Dent1.gameObject.SetActive(false);
                 Dent2.gameObject.SetActive(false);
