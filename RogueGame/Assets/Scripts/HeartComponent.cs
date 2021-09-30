@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class HeartComponent : MonoBehaviour
 {
     public GameObject heart, gameOver;
-    public Sprite Dent1, Dent2, Dent3, Dent4, Dent5;
+    public Image Dent, Dent1, Dent2, Dent3, Dent4;
     public Gradient gradient;
     public static float health;
     public Slider slider;
@@ -18,6 +18,11 @@ public class HeartComponent : MonoBehaviour
         slider.maxValue = health;
         slider.value = health;
         fill.color = gradient.Evaluate(1f);
+        Dent.gameObject.SetActive(true);
+        Dent1.gameObject.SetActive(false);
+        Dent2.gameObject.SetActive(false);
+        Dent3.gameObject.SetActive(false);
+        Dent4.gameObject.SetActive(false);
         /*heart1.gameObject.SetActive(true);
         heart2.gameObject.SetActive(true);
         heart3.gameObject.SetActive(true);
@@ -31,11 +36,50 @@ public class HeartComponent : MonoBehaviour
     {
         slider.value = health;
         fill.color = gradient.Evaluate(slider.normalizedValue);
-        Debug.Log(slider.normalizedValue);
-        if(health <= 0)
-        {
-            gameOver.gameObject.SetActive(true);
-            Time.timeScale = 0;
+        Debug.Log(Mathf.Round(slider.normalizedValue*10));
+
+        switch(Mathf.Round(slider.normalizedValue * 10)) { 
+            case 10:
+                Dent.gameObject.SetActive(true);
+                Dent1.gameObject.SetActive(false);
+                Dent2.gameObject.SetActive(false);
+                Dent3.gameObject.SetActive(false);
+                Dent4.gameObject.SetActive(false);
+            break;
+
+            case 6:
+                Dent.gameObject.SetActive(false);
+                Dent1.gameObject.SetActive(true);
+                Dent2.gameObject.SetActive(false);
+                Dent3.gameObject.SetActive(false);
+                Dent4.gameObject.SetActive(false);
+                break;
+
+            case 4:
+                Dent.gameObject.SetActive(false);
+                Dent1.gameObject.SetActive(false);
+                Dent2.gameObject.SetActive(true);
+                Dent3.gameObject.SetActive(false);
+                Dent4.gameObject.SetActive(false);
+                break;
+
+            case 2:
+                Dent.gameObject.SetActive(false);
+                Dent1.gameObject.SetActive(false);
+                Dent2.gameObject.SetActive(false);
+                Dent3.gameObject.SetActive(true);
+                Dent4.gameObject.SetActive(false);
+                break;
+
+            case 0:
+                Dent.gameObject.SetActive(false);
+                Dent1.gameObject.SetActive(false);
+                Dent2.gameObject.SetActive(false);
+                Dent3.gameObject.SetActive(false);
+                Dent4.gameObject.SetActive(true);
+                //gameOver.gameObject.SetActive(true);
+                Time.timeScale = 0;
+            break;
         }
             
         
