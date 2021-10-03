@@ -5,7 +5,9 @@ using UnityEngine;
 public class GridManagement : MonoBehaviour
 {
     public int width, height;
-    public TileComponent tilePrefab;
+    private float cellWidth;
+    private float cellHeight;
+    public GameObject tilePrefab;
 
     void GenerateGrid()
     {
@@ -13,14 +15,18 @@ public class GridManagement : MonoBehaviour
         {
             for (int y = 0; y < height; y++)
             {
-                var spawnedTile = Instantiate(tilePrefab, new Vector2(x, y), Quaternion.identity);
+                var spawnedTile = Instantiate(tilePrefab, new Vector3(x*cellWidth,y*cellHeight), Quaternion.identity);
                 spawnedTile.name = "Tile (" + x+ "," + y + ")";
             }
         }
     }
+
     // Start is called before the first frame update
     void Start()
     {
+        cellWidth = tilePrefab.transform.localScale.x;
+        cellHeight = tilePrefab.transform.localScale.y;
         GenerateGrid();
+        Debug.Log(cellWidth + " : " + cellHeight);
     }
 }
