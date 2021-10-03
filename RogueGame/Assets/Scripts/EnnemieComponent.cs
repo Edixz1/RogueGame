@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class EnnemieComponent : MonoBehaviour
 {
-   
-    // Start is called before the first frame update
-    void Start()
+    public float health = 10;
+    public void TakeDomage(float damage)
     {
-        
+        health -= damage;
+
+        if(health <=0)
+        {
+            Die();
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    void Die()
     {
-
+        Destroy(gameObject);
     }
 }

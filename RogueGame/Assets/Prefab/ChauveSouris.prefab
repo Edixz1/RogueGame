@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8713980919926358326}
   - component: {fileID: 4995378196829369378}
   - component: {fileID: 2150247346817377416}
+  - component: {fileID: 1048226018597704445}
   m_Layer: 6
   m_Name: ChauveSouris
   m_TagString: Untagged
@@ -130,3 +131,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1048226018597704445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2281708200791393903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8edbebd07a063c248b46d95263f749ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10

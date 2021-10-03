@@ -27,11 +27,11 @@ public class PlayerComponent : MonoBehaviour
 
         if (!isFacingRight && horizontal > 0f)
         {
-            //Flip();
+            Flip();
         }
         else if (isFacingRight && horizontal < 0f)
         {
-            //Flip();
+            Flip();
         }
 
     }
@@ -39,9 +39,7 @@ public class PlayerComponent : MonoBehaviour
     private void Flip()
     {
         isFacingRight = !isFacingRight;
-        Vector3 localScale = transform.localScale;
-        localScale.x *= -1f;
-        transform.localScale = localScale;
+        transform.Rotate(0f, 180f,0f);
     }
 
     public void Move(InputAction.CallbackContext context)
