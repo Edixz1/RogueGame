@@ -36,7 +36,7 @@ public class HeartComponent : MonoBehaviour
     {
         slider.value = health;
         fill.color = gradient.Evaluate(slider.normalizedValue);
-        Debug.Log(Mathf.Round(slider.normalizedValue*10));
+        
 
         switch(Mathf.Round(slider.normalizedValue * 10)) { 
             case 10:
