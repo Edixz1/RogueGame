@@ -2868,7 +2868,7 @@ PrefabInstance:
     - target: {fileID: 4433366163052921349, guid: fa1ddb7bde2ae8943af172624db73bfa,
         type: 3}
       propertyPath: m_Name
-      value: Mur (34)
+      value: DoorNorth
       objectReference: {fileID: 0}
     - target: {fileID: 4433366163052921349, guid: fa1ddb7bde2ae8943af172624db73bfa,
         type: 3}
@@ -2948,6 +2948,25 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4558077594485279263, guid: fa1ddb7bde2ae8943af172624db73bfa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fa1ddb7bde2ae8943af172624db73bfa, type: 3}
+--- !u!1 &290605503 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4433366163052921349, guid: fa1ddb7bde2ae8943af172624db73bfa,
+    type: 3}
+  m_PrefabInstance: {fileID: 290605502}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &290605504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290605503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d599034a4b7265c4190d9059c05a196b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Doors: []
 --- !u!1001 &302750331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5066,7 +5085,7 @@ PrefabInstance:
     - target: {fileID: 4433366163052921349, guid: fa1ddb7bde2ae8943af172624db73bfa,
         type: 3}
       propertyPath: m_Name
-      value: Mur (9)
+      value: DoorEast
       objectReference: {fileID: 0}
     - target: {fileID: 4558077594485279263, guid: fa1ddb7bde2ae8943af172624db73bfa,
         type: 3}
@@ -13025,7 +13044,7 @@ PrefabInstance:
     - target: {fileID: 4433366163052921349, guid: fa1ddb7bde2ae8943af172624db73bfa,
         type: 3}
       propertyPath: m_Name
-      value: Mur (1)
+      value: DoorWest
       objectReference: {fileID: 0}
     - target: {fileID: 4558077594485279263, guid: fa1ddb7bde2ae8943af172624db73bfa,
         type: 3}
