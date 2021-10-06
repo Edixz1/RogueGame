@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CameraMouvementComponent : MonoBehaviour
 {
+    private float ValueHorizontale = 33.189f;
+    private float valueVerticale = 18.81f;
     public GameObject Camera;
     public GameObject Personnage;
     void Awake()
@@ -15,10 +17,14 @@ public class CameraMouvementComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distance = Vector3.Distance(Camera.transform.position, Personnage.transform.position);
-        if (distance >= 11)
+        if (Personnage.transform.position.x - Camera.transform.position.x >= ValueHorizontale /2)
         {
-            Camera.transform.position = new Vector3(Personnage.transform.position.x,Personnage.transform.position.y,Camera.transform.position.z);
+            
+            Camera.transform.position = new Vector3(Camera.transform.position.x + ValueHorizontale,Personnage.transform.position.y,Camera.transform.position.z);
+        }
+        if (Personnage.transform.position.y - Camera.transform.position.y >= valueVerticale /2)
+        {
+            Camera.transform.position = new Vector3(Camera.transform.position.x, Camera.transform.position.y + valueVerticale, Camera.transform.position.z);
         }
     }
 }
