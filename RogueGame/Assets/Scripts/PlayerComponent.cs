@@ -31,7 +31,7 @@ public class PlayerComponent : MonoBehaviour
         HandleDash();
 
         RaycastHit2D raycastHit = Physics2D.Raycast(transform.position, lastMovement, dashDistance);
-        Debug.Log(raycastHit.collider);
+        //Debug.Log(raycastHit.collider);
         //Debug.DrawLine(rb.position, new Vector2(transform.position.x + (lastMovement.x * dashDistance), transform.position.y + (lastMovement.y * dashDistance)), Color.red, 2);
         if (!isFacingRight && horizontal > 0f)
         {
