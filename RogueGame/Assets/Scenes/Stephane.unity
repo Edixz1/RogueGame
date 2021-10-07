@@ -343,7 +343,7 @@ PrefabInstance:
     - target: {fileID: 7944495739036018871, guid: f833c255371d0f747b4b9232deca3180,
         type: 3}
       propertyPath: dashDistance
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8789819604455146321, guid: f833c255371d0f747b4b9232deca3180,
         type: 3}
@@ -979,12 +979,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &276712015 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4961643501956763845, guid: f833c255371d0f747b4b9232deca3180,
-    type: 3}
-  m_PrefabInstance: {fileID: 14555485}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &276712016 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7706922108067631057, guid: f833c255371d0f747b4b9232deca3180,
@@ -997,92 +991,13 @@ Rigidbody2D:
     type: 3}
   m_PrefabInstance: {fileID: 14555485}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &276712018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 276712015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 55b7ff2774dc9d9408de637f302fc3ed,
-    type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 276712019}
-        m_TargetAssemblyTypeName: PlayerComponent, Assembly-CSharp
-        m_MethodName: Move
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: ea65ce38-3d91-4056-91cb-2909372355aa
-    m_ActionName: Player/Move[/Keyboard/a,/Keyboard/d,/Keyboard/s,/Keyboard/w]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 276712019}
-        m_TargetAssemblyTypeName: PlayerComponent, Assembly-CSharp
-        m_MethodName: Dash
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: cbd3531a-2a00-425e-8883-2cf218a61f51
-    m_ActionName: Player/Dash[/Keyboard/shift]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1089864422}
-        m_TargetAssemblyTypeName: WeaponComponent, Assembly-CSharp
-        m_MethodName: Shoot
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: d3d9fbf6-3495-4166-be4f-3cb4b77de1ad
-    m_ActionName: Player/Shoot[/Keyboard/space]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!114 &276712019 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7944495739036018871, guid: f833c255371d0f747b4b9232deca3180,
     type: 3}
   m_PrefabInstance: {fileID: 14555485}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 276712015}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dee13dd163c5a1b4a86cf5930a023816, type: 3}
@@ -3818,6 +3733,7 @@ GameObject:
   - component: {fileID: 1198424272}
   - component: {fileID: 1198424271}
   - component: {fileID: 1198424274}
+  - component: {fileID: 1198424275}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -3942,6 +3858,85 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   slider: {fileID: 2028751510}
   fill: {fileID: 352098040}
+--- !u!114 &1198424275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198424270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 55b7ff2774dc9d9408de637f302fc3ed,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 276712019}
+        m_TargetAssemblyTypeName: PlayerComponent, Assembly-CSharp
+        m_MethodName: Move
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ea65ce38-3d91-4056-91cb-2909372355aa
+    m_ActionName: Player/Move[/Keyboard/a,/Keyboard/d,/Keyboard/s,/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 276712019}
+        m_TargetAssemblyTypeName: PlayerComponent, Assembly-CSharp
+        m_MethodName: Dash
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: cbd3531a-2a00-425e-8883-2cf218a61f51
+    m_ActionName: Player/Dash[/Keyboard/shift]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1089864422}
+        m_TargetAssemblyTypeName: WeaponComponent, Assembly-CSharp
+        m_MethodName: Shoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d3d9fbf6-3495-4166-be4f-3cb4b77de1ad
+    m_ActionName: Player/Shoot[/Keyboard/space]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1001 &1213037740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7672,6 +7667,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110914545983790630, guid: 93f87da395c1caf40b918103fdceb9a5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110914545983790630, guid: 93f87da395c1caf40b918103fdceb9a5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7110914545983790630, guid: 93f87da395c1caf40b918103fdceb9a5,
         type: 3}
