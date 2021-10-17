@@ -14,7 +14,7 @@ public class HeartComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        health = 1;
+        health = slider.maxValue;
         slider.maxValue = health;
         slider.value = health;
         fill.color = gradient.Evaluate(1f);
@@ -91,7 +91,7 @@ public class HeartComponent : MonoBehaviour
         }
             
         
-        if (health > 1) health = 1;
+        if (health > slider.maxValue) health = slider.maxValue;
         /*switch (health)
         {
             case 3:
