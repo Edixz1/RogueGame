@@ -9,13 +9,8 @@ public class CameraMouvementComponent : MonoBehaviour
     private float valueVerticale = 18.81f;
     public GameObject Camera;
     public GameObject Personnage;
-    void Awake()
-    {
-        Camera = GameObject.Find("Main Camera");
-        Personnage = GameObject.Find("Personnage");
-    }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (Personnage.transform.position.x - Camera.transform.position.x >= ValueHorizontale /2)
