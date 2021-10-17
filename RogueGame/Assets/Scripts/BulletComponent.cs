@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class BulletComponent : MonoBehaviour
 {
-    public float speed = 20f;
-    public float damage = 1;
-    public Rigidbody2D rb;
+    public static float speed = 20f;
+    public static float damage = 1;
+    public static Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {

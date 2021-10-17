@@ -5308,6 +5308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cbab3f64e487135408d5207306a11c25, type: 2}
+  healthBar: {fileID: 0}
 --- !u!58 &1378500474
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8390,6 +8391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: dbe5e2e045805d44eac770399d37cbe9, type: 2}
+  healthBar: {fileID: 0}
 --- !u!1001 &2141984648
 PrefabInstance:
   m_ObjectHideFlags: 0

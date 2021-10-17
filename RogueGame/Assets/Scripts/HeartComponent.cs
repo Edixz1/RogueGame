@@ -9,7 +9,7 @@ public class HeartComponent : MonoBehaviour
     public Image Dent, Dent1, Dent2, Dent3, Dent4;
     public Gradient gradient;
     public static float health;
-    public Slider slider;
+    public static Slider slider;
     public Image fill;
     // Start is called before the first frame update
     void Start()

@@ -17,7 +17,7 @@ public class Item : ScriptableObject
     //modifie les armes a feu
     public float bulletSpeedMultiplier = 1;
     public float bulletSizeMultiplier = 1;
-    public float bulletDamage = 1;
+    public float bulletDamageMultiplier = 1;
     public float fireRateMultiplier = 1;
     
 
