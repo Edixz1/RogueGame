@@ -12,11 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0f8281d3afbfff479df950212826155, type: 3}
   m_Name: Nouvel Item
   m_EditorClassIdentifier: 
-  name: Nouvel Item
+  name: caac
   icon: {fileID: 0}
   isDefaultItem: 0
   maxHealthIncrease: 0
+  heal: 0
+  allowsFlight: 0
   speedMultiplier: 1
   sizeMultiplier: 1
   bulletSpeedMultiplier: 1
   bulletSizeMultiplier: 1
+  bulletDamage: 1
+  fireRateMultiplier: 1
