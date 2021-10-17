@@ -16,10 +16,15 @@ public class Item : ScriptableObject
     };*/
 
     public int maxHealthIncrease = 0;
+    public int heal = 0;
+    public bool allowsFlight = false;
     public float speedMultiplier = 1;
     public float sizeMultiplier = 1;
     public float bulletSpeedMultiplier = 1;
     public float bulletSizeMultiplier = 1;
+    public float bulletDamage = 1;
+    public float fireRateMultiplier = 1;
+    
 
 }
 
