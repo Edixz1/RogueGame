@@ -19,7 +19,9 @@ public class Pickup : MonoBehaviour
             PlayerComponent stats = player.GetComponent<PlayerComponent>();
             //appliquer tout les changements qu'un item peut appliquer
             stats.movementSpeed *= item.speedMultiplier;
-            player.transform.localScale *= item.sizeMultiplier; 
+            player.transform.localScale *= item.sizeMultiplier;
+            stats.inventaire.Add(item);
+
             //retirer l'item du jeu
             Destroy(gameObject);
         }

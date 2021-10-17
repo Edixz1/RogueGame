@@ -235,8 +235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f89d2b7030ddd4499c7e94e44e005b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 2
-  height: 2
+  width: 4
+  height: 4
   sallePrefab: {fileID: 5176221677463407631, guid: b0701332afdf3d043ba0348267743a02,
     type: 3}
   tlieSize: {fileID: 3312362261958884107, guid: 4ef2a33845bf2424eac3911aa1ce6f4f,

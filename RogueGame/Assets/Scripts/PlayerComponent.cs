@@ -12,6 +12,7 @@ public class PlayerComponent : MonoBehaviour
     public Rigidbody2D rb;
     public Image abilityDash;
     public float coolDown = 5;
+    public List<Item> inventaire;
 
     private float horizontal;
     private float vertical;
