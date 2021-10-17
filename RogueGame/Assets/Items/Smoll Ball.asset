@@ -10,8 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0f8281d3afbfff479df950212826155, type: 3}
-  m_Name: Nouvel Item
+  m_Name: Smoll Ball
   m_EditorClassIdentifier: 
-  name: Nouvel Item
+  name: Ball of Smoll
   icon: {fileID: 0}
   isDefaultItem: 0
+  maxHealthIncrease: 0
+  speedMultiplier: 2
+  sizeMultiplier: 0.5
+  bulletSpeedMultiplier: 1
+  bulletSizeMultiplier: 1

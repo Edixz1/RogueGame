@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Nouvel Item", menuName = "Inventaire/Item")]
@@ -6,6 +7,19 @@ public class Item : ScriptableObject
     new public string name = "Nouvel Item";
     public Sprite icon = null;
     public bool isDefaultItem = false;
-    public GameObject effect;
+    /*public Dictionary<string, float> Multipliers = new Dictionary<string, float>
+    {
+        { "speed" , 1 },
+        { "size" , 1 },
+        { "bullet speed", 1 },
+        { "bullet size", 1 }
+    };*/
+
+    public int maxHealthIncrease = 0;
+    public float speedMultiplier = 1;
+    public float sizeMultiplier = 1;
+    public float bulletSpeedMultiplier = 1;
+    public float bulletSizeMultiplier = 1;
+
 }
 
