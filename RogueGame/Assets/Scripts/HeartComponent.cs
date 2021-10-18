@@ -9,11 +9,13 @@ public class HeartComponent : MonoBehaviour
     public Image Dent, Dent1, Dent2, Dent3, Dent4;
     public Gradient gradient;
     public static float health;
-    public static Slider slider;
+    public Slider slider;
     public Image fill;
+    public static float maxHealth;
     // Start is called before the first frame update
     void Start()
     {
+        maxHealth = slider.maxValue;
         health = slider.maxValue;
         slider.maxValue = health;
         slider.value = health;
@@ -34,6 +36,7 @@ public class HeartComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        slider.maxValue = maxHealth;
         slider.value = health;
         fill.color = gradient.Evaluate(slider.normalizedValue);
         

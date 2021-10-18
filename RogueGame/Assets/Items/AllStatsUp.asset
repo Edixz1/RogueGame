@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0f8281d3afbfff479df950212826155, type: 3}
-  m_Name: Nouvel Item
+  m_Name: AllStatsUp
   m_EditorClassIdentifier: 
-  name: caac
+  name: All Stats Up
   icon: {fileID: 0}
   isDefaultItem: 0
-  maxHealthIncrease: 0
-  heal: 0
-  allowsFlight: 0
-  speedMultiplier: 1
-  sizeMultiplier: 1
-  bulletSpeedMultiplier: 1
-  bulletSizeMultiplier: 1
-  bulletDamage: 1
-  fireRateMultiplier: 1
+  maxHealthIncrease: 1
+  heal: 1
+  allowsFlight: 1
+  speedMultiplier: 2
+  sizeMultiplier: 1.2
+  bulletSpeedMultiplier: 2
+  bulletSizeMultiplier: 5
+  bulletDamageMultiplier: 2
+  fireRateMultiplier: 2
