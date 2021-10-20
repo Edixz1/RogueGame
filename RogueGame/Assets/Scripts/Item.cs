@@ -5,6 +5,7 @@ using UnityEngine;
 public class Item : ScriptableObject
 {
     new public string name = "Nouvel Item";
+    public string description = "Effets de l'item";
     public Sprite icon = null;
     public bool isDefaultItem = false;
     //modifie la vie
