@@ -16,7 +16,11 @@ MonoBehaviour:
   icon: {fileID: 0}
   isDefaultItem: 0
   maxHealthIncrease: 0
+  heal: 0
+  allowsFlight: 0
   speedMultiplier: 0.5
   sizeMultiplier: 2
   bulletSpeedMultiplier: 1
-  bulletSizeMultiplier: 1
+  bulletSizeMultiplier: 2
+  bulletDamageMultiplier: 1
+  fireRateMultiplier: 1
