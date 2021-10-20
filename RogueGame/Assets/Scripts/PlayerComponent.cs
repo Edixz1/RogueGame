@@ -13,6 +13,7 @@ public class PlayerComponent : MonoBehaviour
     public Image abilityDash;
     public float coolDown = 5;
     public List<Item> inventaire;
+    public GameObject menuPause;
 
     private float horizontal;
     private float vertical;
@@ -21,9 +22,11 @@ public class PlayerComponent : MonoBehaviour
     private bool isFacingRight = true;
     private bool isDashing = false;
     private bool isCoolDown = false;
+    private bool isPause = false;
 
     private void Start()
     {
+        menuPause.SetActive(false);
         abilityDash.fillAmount = 0;
     }
     void Update()
@@ -84,6 +87,23 @@ public class PlayerComponent : MonoBehaviour
         vertical = context.ReadValue<Vector2>().y;
 
         
+    }
+
+    public void Pause(InputAction.CallbackContext context)
+    {
+        isPause = !isPause;
+        if(isPause)
+        {
+
+            menuPause.SetActive(true);
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+            menuPause.SetActive(false);
+        }
+
     }
 
     public void Dash(InputAction.CallbackContext context)
