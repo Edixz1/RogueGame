@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8713980919926358326}
   - component: {fileID: 4995378196829369378}
   - component: {fileID: 2150247346817377416}
-  - component: {fileID: 1048226018597704445}
+  - component: {fileID: -6642730990250883413}
   m_Layer: 6
   m_Name: ChauveSouris
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2281708200791393903}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -96,7 +96,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.01843974, y: -0.0049173236}
@@ -131,7 +131,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1048226018597704445
+--- !u!114 &-6642730990250883413
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2281708200791393903}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8edbebd07a063c248b46d95263f749ec, type: 3}
+  m_Script: {fileID: 11500000, guid: d383b6790d0b742458b5e081c488ea7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  speed: 6

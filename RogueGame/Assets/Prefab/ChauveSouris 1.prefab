@@ -182,8 +182,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7e2f0f6d6c780144b29b80fb11ba3b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTimeBtwShots: 0
-  projectile: {fileID: 7497113683238832117, guid: 32c959eb091dd404e8254c408d4894a6,
+  startTimeBtwShots: 2
+  projectile: {fileID: 2281708200791393903, guid: 93f87da395c1caf40b918103fdceb9a5,
     type: 3}
 --- !u!114 &7956210319991795429
 MonoBehaviour:
