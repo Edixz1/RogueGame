@@ -27,7 +27,6 @@ public class Pickup : MonoBehaviour
             //appliquer changements mouvement
             stats.movementSpeed *= item.speedMultiplier;
             player.transform.localScale *= item.sizeMultiplier;
-            
             //appliquer changements bullets
             BulletComponent.damage *= item.bulletDamageMultiplier;
             BulletComponent.speed *= item.bulletSpeedMultiplier;

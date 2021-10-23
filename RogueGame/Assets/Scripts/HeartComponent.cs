@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HeartComponent : MonoBehaviour
 {
-    public GameObject heart, gameOver;
+    public GameObject gameOver;
     public Image Dent, Dent1, Dent2, Dent3, Dent4;
     public Gradient gradient;
     public static float health;
@@ -15,6 +15,7 @@ public class HeartComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         maxHealth = slider.maxValue;
         health = slider.maxValue;
         slider.maxValue = health;
@@ -25,11 +26,12 @@ public class HeartComponent : MonoBehaviour
         Dent2.gameObject.SetActive(false);
         Dent3.gameObject.SetActive(false);
         Dent4.gameObject.SetActive(false);
+        gameOver.gameObject.SetActive(false);
         /*heart1.gameObject.SetActive(true);
         heart2.gameObject.SetActive(true);
         heart3.gameObject.SetActive(true);
 
-        gameOver.gameObject.SetActive(false);*/
+       */
 
     }
 
@@ -88,7 +90,7 @@ public class HeartComponent : MonoBehaviour
                 Dent2.gameObject.SetActive(false);
                 Dent3.gameObject.SetActive(false);
                 Dent4.gameObject.SetActive(true);
-                //gameOver.gameObject.SetActive(true);
+                gameOver.gameObject.SetActive(true);
                 Time.timeScale = 0;
             break;
         }

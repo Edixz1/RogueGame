@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 704496361307679952}
   - component: {fileID: 2484116380933734798}
   - component: {fileID: 6722907798600059984}
+  - component: {fileID: 1451762528785788497}
   m_Layer: 6
   m_Name: CandyCorn
   m_TagString: Untagged
@@ -124,3 +125,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+--- !u!114 &1451762528785788497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290965088106567917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11e038f2bb4754549bef7386cfeb1ac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
