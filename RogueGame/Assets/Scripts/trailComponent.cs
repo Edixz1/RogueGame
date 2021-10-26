@@ -20,7 +20,7 @@ public class trailComponent : MonoBehaviour
     {
         if (timeBtwSpawns <= 0)
         {
-            Instantiate(trail, transform.position, Quaternion.identity);
+            //Instantiate(trail, transform.position, Quaternion.identity);
             timeBtwSpawns = startTimeBtwSpawns;
         }
         else
