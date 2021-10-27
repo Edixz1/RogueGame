@@ -12,42 +12,51 @@ public class ProceduralGeneration : MonoBehaviour
     private RoomTemplate templates;
     private int rand;
     private bool spawned = false;
+    private Vector3 center;
     private void Start()
     {
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplate>();
         Debug.Log(templates);
         //Se get Gizmo 0 son transform faire une variable
-        Invoke("Spawn", 0.01f);
+        Invoke("Spawn", 2);
     }
 
     void Spawn()
     {
         if (!spawned)
         {
-            if(openingDirection == 0)
-            {
-                //GameObject temps = gizmo0.transform;
-            }
 
             if (openingDirection == 1)
             {
                 rand = Random.Range(0, templates.bottomRooms.Length);
-                Instantiate(templates.bottomRooms[rand],new Vector3(transform.position.x + 14.7f,2.5f,0), Quaternion.identity);
+                Instantiate(templates.bottomRooms[rand],new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
             }
             else if (openingDirection == 2)
             {
                 rand = Random.Range(0, templates.topRooms.Length);
-                Instantiate(templates.topRooms[rand], new Vector3(14.7f, 2.5f, 0), Quaternion.identity);
+                Instantiate(templates.topRooms[rand], new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
             }
             else if (openingDirection == 3)
             {
                 rand = Random.Range(0, templates.leftRooms.Length);
-                Instantiate(templates.leftRooms[rand], new Vector3(14.7f, 2.5f, 0), Quaternion.identity);
+                Instantiate(templates.leftRooms[rand], new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
             }
             else if (openingDirection == 4)
             {
                 rand = Random.Range(0, templates.rightRooms.Length);
-                Instantiate(templates.rightRooms[rand], new Vector3(14.7f, 2.5f, 0), Quaternion.identity);
+                Instantiate(templates.rightRooms[rand], new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+            }
+            spawned = true;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("SpawnPoint"))
+        {
+            if(collision.GetComponent<ProceduralGeneration>().spawned == false && spawned == false)
+            {
+                //Instantiate(templates.closerRoom, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+                Destroy(gameObject);
             }
             spawned = true;
         }

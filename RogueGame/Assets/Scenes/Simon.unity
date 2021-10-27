@@ -184,7 +184,7 @@ PrefabInstance:
     - target: {fileID: 1290965088106567917, guid: 83e04d2045b669049a46498f8f6e0677,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1451762528785788497, guid: 83e04d2045b669049a46498f8f6e0677,
         type: 3}
@@ -9059,7 +9059,7 @@ MonoBehaviour:
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
     cacheStartup: 0
-  showNavGraphs: 1
+  showNavGraphs: 0
   showUnwalkableNodes: 1
   debugMode: 0
   debugFloor: 0
@@ -10136,7 +10136,7 @@ PrefabInstance:
     - target: {fileID: 8196659781328673223, guid: 2ba89d80897d5804694c768cf2c42dc7,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8196659781328673223, guid: 2ba89d80897d5804694c768cf2c42dc7,
         type: 3}
