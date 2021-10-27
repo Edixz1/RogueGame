@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class Possibility : MonoBehaviour
 {
-    public GameObject[] tilePossibillity;
+    public List<GameObject> tilePossibillity;
 
     void Awake()
     {
-        int rand = Random.Range(0, tilePossibillity.Length);
-        tilePossibillity[rand].SetActive(true);
+       
     }
 
 }

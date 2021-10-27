@@ -241,6 +241,10 @@ MonoBehaviour:
     type: 3}
   tlieSize: {fileID: 3312362261958884107, guid: 4ef2a33845bf2424eac3911aa1ce6f4f,
     type: 3}
+  minXValue: 2
+  maxXValue: 0
+  minYValue: 2
+  maxYValue: 0
 --- !u!4 &1378399226
 Transform:
   m_ObjectHideFlags: 0

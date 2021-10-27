@@ -27,14 +27,19 @@ public class SpawnerComponent : MonoBehaviour
         for (int i = 0; i < spawnZones.Length; i++)
         {
             randomEnemmy = Random.Range(0, enemies.Length); // grab random ennemy
-            enemyList.Add(Instantiate(enemies[randomEnemmy], spawnZones[i].transform.position, Quaternion.identity));
-
-
+            enemyList.Add(spawnEnemies(enemies[randomEnemmy], spawnZones[i].transform));
+            //enemyList.Add(Instantiate(enemies[randomEnemmy], spawnZones[i].transform.position, Quaternion.identity));
         }
         
     }
 
-    
+    GameObject spawnEnemies(GameObject obj, Transform trans)
+    {
+
+        obj = Instantiate(obj, trans.position, Quaternion.identity);
+        obj.transform.parent = this.transform;
+        return obj;
+    }
 
     
 }
