@@ -8,7 +8,7 @@ public class EnnemieComponent : MonoBehaviour
     public void TakeDomage(float damage)
     {
         health -= damage;
-
+        FindObjectOfType<audioManager>().Play("EnemyIsHit");
         if(health <=0)
         {
             Die();

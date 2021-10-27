@@ -31,6 +31,6 @@ public class ProjectileComponent : MonoBehaviour
             }
             Destroy(gameObject);
         }
-
+        FindObjectOfType<audioManager>().Play("EnemyIsHit");
     }
 }

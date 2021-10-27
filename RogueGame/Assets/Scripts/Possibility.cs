@@ -5,10 +5,4 @@ using UnityEngine;
 public class Possibility : MonoBehaviour
 {
     public List<GameObject> tilePossibillity;
-
-    void Awake()
-    {
-       
-    }
-
 }
