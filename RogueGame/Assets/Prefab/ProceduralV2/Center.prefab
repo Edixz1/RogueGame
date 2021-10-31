@@ -212,7 +212,9 @@ MonoBehaviour:
   - {fileID: 614982865544579599, guid: 4bc6236fa8ff39f45aaa5299e41f3e3d, type: 3}
   - {fileID: 9013053708103394732, guid: 65d270745c2f4254a85b023e8e596f34, type: 3}
   - {fileID: 3153585606807512573, guid: 086e1392fd81d544a91a4f23e0ec4280, type: 3}
-  closerRoom: {fileID: 0}
+  rooms: []
+  waitTime: 0
+  boss: {fileID: 0}
 --- !u!1 &451187647438918055
 GameObject:
   m_ObjectHideFlags: 0

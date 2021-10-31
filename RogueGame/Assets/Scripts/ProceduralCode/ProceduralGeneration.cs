@@ -18,7 +18,7 @@ public class ProceduralGeneration : MonoBehaviour
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplate>();
         Debug.Log(templates);
         //Se get Gizmo 0 son transform faire une variable
-        Invoke("Spawn", 2);
+        Invoke("Spawn", 0.2f);
     }
 
     void Spawn()
