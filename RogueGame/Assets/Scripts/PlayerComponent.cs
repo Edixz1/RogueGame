@@ -24,10 +24,16 @@ public class PlayerComponent : MonoBehaviour
     private bool isCoolDown = false;
     private bool isPause = false;
 
+
+    static SpriteRenderer sr;
+    public static bool isBlinking = false;
+
     private void Start()
     {
+        
         menuPause.SetActive(false);
         abilityDash.fillAmount = 0;
+        sr = GetComponent<SpriteRenderer>();
     }
     void Update()
     {
@@ -77,7 +83,7 @@ public class PlayerComponent : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.gameObject.layer == 6)
-            HeartComponent.health -= 0.1f;   
+            HeartComponent.TakeDamage();   
     }
     //InputSystem Get
     public void Move(InputAction.CallbackContext context)
@@ -112,6 +118,14 @@ public class PlayerComponent : MonoBehaviour
             isDashing = true;
     }
     
+    public static IEnumerator Blink()
+    {
+        Debug.Log("Started Coroutine at timestamp : " + Time.time);
+        sr.color = new Color(1,1,1,0);
+        yield return new WaitForSeconds(.1f);
+        sr.color = new Color(1, 1, 1, 1);
+        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+    }
 
-    
+
 }

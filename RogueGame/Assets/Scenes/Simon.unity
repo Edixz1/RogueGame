@@ -2599,9 +2599,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 5
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -6227,6 +6227,11 @@ MonoBehaviour:
     volume: 1
     pitch: 3
     source: {fileID: 0}
+  - name: PlayerIsHit
+    clip: {fileID: 8300000, guid: 0655692d842be3d4290f4150cc8560fa, type: 3}
+    volume: 1
+    pitch: 0.1
+    source: {fileID: 0}
 --- !u!4 &1348597060
 Transform:
   m_ObjectHideFlags: 0
@@ -8862,6 +8867,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 388459935860769214, guid: f833c255371d0f747b4b9232deca3180,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 388459935860769214, guid: f833c255371d0f747b4b9232deca3180,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 388459935860769214, guid: f833c255371d0f747b4b9232deca3180,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 388459935860769214, guid: f833c255371d0f747b4b9232deca3180,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3742436198010554655, guid: f833c255371d0f747b4b9232deca3180,
         type: 3}
       propertyPath: m_Layer
@@ -8891,6 +8916,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FlipY
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021809604571320803, guid: f833c255371d0f747b4b9232deca3180,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7706922108067631057, guid: f833c255371d0f747b4b9232deca3180,
         type: 3}
