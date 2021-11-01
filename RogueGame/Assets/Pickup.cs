@@ -25,11 +25,11 @@ public class Pickup : MonoBehaviour
             HeartComponent.health += item.heal;
             
             //appliquer changements mouvement
-            stats.movementSpeed *= item.speedMultiplier;
-            player.transform.localScale *= item.sizeMultiplier;
+            stats.movementSpeed += stats.movementSpeed * item.speedMultiplier;
+            player.transform.localScale += player.transform.localScale * item.sizeMultiplier;
             //appliquer changements bullets
-            BulletComponent.damage *= item.bulletDamageMultiplier;
-            BulletComponent.speed *= item.bulletSpeedMultiplier;
+            BulletComponent.damage += BulletComponent.damage * item.bulletDamageMultiplier;
+            BulletComponent.speed += BulletComponent.speed * item.bulletSpeedMultiplier;
             //BulletComponent.scale = item.bulletSizeMultiplier;
             
             //ajouter l'item a l'inventaire du joueur

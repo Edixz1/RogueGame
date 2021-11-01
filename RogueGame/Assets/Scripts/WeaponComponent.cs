@@ -7,6 +7,7 @@ public class WeaponComponent : MonoBehaviour
     public Transform canon;
     public GameObject bulletPrefab;
     public float damage = 1;
+
     //public LineRenderer line;
     public void Shoot()
     {

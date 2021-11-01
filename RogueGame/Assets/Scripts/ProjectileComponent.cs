@@ -7,7 +7,7 @@ public class ProjectileComponent : MonoBehaviour
     public float speed;
     private Transform player;
     private Vector2 target;
-    private float damage = 0.1f;
+    private float damage = .5f;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -27,10 +27,10 @@ public class ProjectileComponent : MonoBehaviour
         {
             if (collision.CompareTag("Player"))
             {
-                HeartComponent.health -= damage;
+                HeartComponent.TakeDamage(damage);
             }
             Destroy(gameObject);
         }
-
+        FindObjectOfType<audioManager>().Play("EnemyIsHit");
     }
 }

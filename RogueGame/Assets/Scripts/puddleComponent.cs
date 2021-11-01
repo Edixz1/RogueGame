@@ -5,7 +5,6 @@ using UnityEngine;
 public class puddleComponent : MonoBehaviour
 {
     private bool isPlayertouching = false;
-    private float damage = 0.01f;
     private float timeAlive = 5;
     // Start is called before the first frame update
     void Start()
@@ -18,8 +17,8 @@ public class puddleComponent : MonoBehaviour
     {
         if (isPlayertouching)
         {
-            HeartComponent.health -= damage; //cest un peu scuffed que ca fasse bobo a chaque frame
-                                             //mais quand on aura des frames d'invulnerabilité ca sera good :)
+            HeartComponent.TakeDamage(); //cest un peu scuffed que ca fasse bobo a chaque frame
+                                         //mais quand on aura des frames d'invulnerabilité ca sera good :)
         }
         if (timeAlive>0)
         {
