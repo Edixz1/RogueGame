@@ -12,9 +12,14 @@ public class HeartComponent : MonoBehaviour
     public Slider slider;
     public Image fill;
     public static float maxHealth;
+    public static bool iFrames = false;
+    private float iFrameTimer = 1;
+    private float timeBtwBlinks;
+    private float startTimeBtwBlinks = .2f;
     // Start is called before the first frame update
     void Start()
     {
+        timeBtwBlinks = startTimeBtwBlinks;
         Time.timeScale = 1;
         maxHealth = slider.maxValue;
         health = slider.maxValue;
@@ -41,16 +46,39 @@ public class HeartComponent : MonoBehaviour
         slider.maxValue = maxHealth;
         slider.value = health;
         fill.color = gradient.Evaluate(slider.normalizedValue);
-        
+        if (iFrames)
+        {
+            if (iFrameTimer <= 0)
+            {
+                iFrames = false;
+                iFrameTimer = 1;
+            }
+            else
+            {
+                iFrameTimer -= Time.deltaTime;
+                if (timeBtwBlinks<=0)
+                {
+                    StartCoroutine(PlayerComponent.Blink());
+                    timeBtwBlinks = startTimeBtwBlinks;
+                }
+                else
+                {
+                    timeBtwBlinks -= Time.deltaTime;
+                }
 
-        switch(Mathf.Round(slider.normalizedValue * 10)) { 
+            }
+        }
+
+
+        switch (Mathf.Round(slider.normalizedValue * 10))
+        {
             case 10:
                 Dent.gameObject.SetActive(true);
                 Dent1.gameObject.SetActive(false);
                 Dent2.gameObject.SetActive(false);
                 Dent3.gameObject.SetActive(false);
                 Dent4.gameObject.SetActive(false);
-            break;
+                break;
 
             case 8:
                 Dent.gameObject.SetActive(true);
@@ -92,10 +120,10 @@ public class HeartComponent : MonoBehaviour
                 Dent4.gameObject.SetActive(true);
                 gameOver.gameObject.SetActive(true);
                 Time.timeScale = 0;
-            break;
+                break;
         }
-            
-        
+
+
         if (health > slider.maxValue) health = slider.maxValue;
         /*switch (health)
         {
@@ -122,4 +150,33 @@ public class HeartComponent : MonoBehaviour
                 break;
         }*/
     }
+    public static void TakeDamage(float damage)
+    {
+        if (!iFrames)
+        {
+            if (damage > 0)
+            {
+                FindObjectOfType<audioManager>().Play("PlayerIsHit");
+                health -= damage;
+                iFrames = true;
+            }
+            else
+            {
+                TakeDamage();
+            }
+
+        }
+
+    }
+    public static void TakeDamage()
+    {
+        if (!iFrames)
+        {
+            FindObjectOfType<audioManager>().Play("PlayerIsHit");
+            health -= 1;
+            iFrames = true;
+        }
+
+    }
+
 }
