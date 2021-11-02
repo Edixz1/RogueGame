@@ -37,7 +37,7 @@ public class SpawnerComponent : MonoBehaviour
     {
 
         obj = Instantiate(obj, trans.position, Quaternion.identity);
-        obj.transform.parent = this.transform;
+        obj.transform.parent = this.transform.GetChild(0);
         return obj;
     }
 
