@@ -6,8 +6,8 @@ public class DoorscriptComponent : MonoBehaviour
 {
     public int ennemiesAlive;
     public bool ennemiesAreAlive;
-    public GameObject Ennemies;
-    public GameObject Doors;
+    GameObject Ennemies;
+    GameObject Doors;
     // Start is called before the first frame update
     void Awake()
     {
@@ -18,19 +18,20 @@ public class DoorscriptComponent : MonoBehaviour
         ennemiesAlive = Ennemies.transform.childCount;
         ennemiesAreAlive = false;
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        for (int i = 0; i < Ennemies.transform.childCount; i++)
+        for(int i = 0; i < Ennemies.transform.childCount; i++)
         {
             if (Ennemies.transform.GetChild(i).gameObject.activeInHierarchy)
             {
                 ennemiesAlive++;
             }
         }
-        if(ennemiesAlive == 0)
+        if (ennemiesAlive == 0 && collision.gameObject.layer == 10)
         {
+            collision.gameObject.SetActive(false);
             Doors.SetActive(false);
         }
         ennemiesAlive = 0;
