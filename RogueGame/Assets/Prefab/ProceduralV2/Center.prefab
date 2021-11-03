@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 8258060334717322164}
   - component: {fileID: 5866615351407105379}
   - component: {fileID: 7402427307079143392}
+  - component: {fileID: -7762198214535456683}
   m_Layer: 0
   m_Name: Center
   m_TagString: Rooms
@@ -232,7 +233,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ennemiesAlive: 0
-  ennemiesAreAlive: 0
+  Ennemies: {fileID: 0}
+  Doors: {fileID: 0}
+--- !u!50 &-7762198214535456683
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301063496135920898}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &396486683681866884
 GameObject:
   m_ObjectHideFlags: 0

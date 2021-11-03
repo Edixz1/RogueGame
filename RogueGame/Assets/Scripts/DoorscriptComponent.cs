@@ -5,29 +5,55 @@ using UnityEngine;
 public class DoorscriptComponent : MonoBehaviour
 {
     public int ennemiesAlive;
-    public bool ennemiesAreAlive;
-    GameObject Ennemies;
-    GameObject Doors;
+    public GameObject Ennemies;
+    public GameObject Doors;
     // Start is called before the first frame update
     void Awake()
     {
         Doors = this.transform.Find("Doors").gameObject;
+        Debug.Log(Doors);
         GameObject Spawner = this.transform.Find("Spawners").gameObject;
         Ennemies = Spawner.transform.GetChild(0).gameObject;
         ennemiesAlive = Ennemies.transform.childCount;
-        ennemiesAreAlive = false;
     }
-    
-    
     private void OnTriggerStay2D(Collider2D collision)
     {
-        for(int i = 0; i < Ennemies.transform.childCount; i++)
+        for (int i = 0; i < Ennemies.transform.childCount; i++)
         {
             if (Ennemies.transform.GetChild(i).gameObject.activeInHierarchy)
             {
                 ennemiesAlive++;
             }
         }
+        if (ennemiesAlive == 0 && collision.gameObject.layer == 10)
+        {
+            collision.gameObject.SetActive(false);
+            Doors.SetActive(false);
+        }
+        ennemiesAlive = 0;
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        ennemiesAlive = 0;
+        for (int i = 0; i < Ennemies.transform.childCount; i++)
+        {
+            if (Ennemies.transform.GetChild(i).gameObject.activeInHierarchy)
+            {
+                ennemiesAlive++;
+            }
+        }
+        Debug.Log("pogers");
+        if (ennemiesAlive == 0 && collision.gameObject.layer == 10)
+        {
+            collision.gameObject.SetActive(false);
+            Doors.SetActive(false);
+        }
+        ennemiesAlive = 0;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("pog");
         if (ennemiesAlive == 0 && collision.gameObject.layer == 10)
         {
             collision.gameObject.SetActive(false);

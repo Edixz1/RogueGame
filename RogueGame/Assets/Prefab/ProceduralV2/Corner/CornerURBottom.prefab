@@ -54,6 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4214903706079024683}
   - component: {fileID: 4295074417466847047}
+  - component: {fileID: -8115348244234217885}
   m_Layer: 0
   m_Name: CornerURBottom
   m_TagString: Rooms
@@ -147,6 +148,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 331a4768ac239254f8ab334c1b2d8f7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &-8115348244234217885
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5972981566078260125}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &176471619547313100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1122,15 +1144,15 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1330715772817016658, guid: cb6911b0d9387ec4b8ebfb0bfb2e1718, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cb6911b0d9387ec4b8ebfb0bfb2e1718, type: 3}
---- !u!4 &1768505338873532547 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2936948501336590701, guid: cb6911b0d9387ec4b8ebfb0bfb2e1718,
-    type: 3}
-  m_PrefabInstance: {fileID: 3479273865999866350}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &727154696480879225 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4206224053310532503, guid: cb6911b0d9387ec4b8ebfb0bfb2e1718,
+    type: 3}
+  m_PrefabInstance: {fileID: 3479273865999866350}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1768505338873532547 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2936948501336590701, guid: cb6911b0d9387ec4b8ebfb0bfb2e1718,
     type: 3}
   m_PrefabInstance: {fileID: 3479273865999866350}
   m_PrefabAsset: {fileID: 0}
