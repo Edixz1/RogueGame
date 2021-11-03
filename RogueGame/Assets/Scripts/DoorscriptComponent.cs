@@ -12,7 +12,6 @@ public class DoorscriptComponent : MonoBehaviour
     void Awake()
     {
         Doors = this.transform.Find("Doors").gameObject;
-        GameObject map = this.gameObject;
         GameObject Spawner = this.transform.Find("Spawners").gameObject;
         Ennemies = Spawner.transform.GetChild(0).gameObject;
         ennemiesAlive = Ennemies.transform.childCount;
