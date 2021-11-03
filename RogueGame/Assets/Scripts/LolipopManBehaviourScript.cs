@@ -7,13 +7,14 @@ public class LolipopManBehaviourScript : MonoBehaviour
     private Transform player;
     private float speed = 5;
     private float rangeMoreOrLess = 1;
-    public float waitTime = 1;
+    public float waitTime = 8;
     private float coolDown;
     private bool facingRight = true;
 
     public Animator animator;
     public GameObject projectile;
     private Transform spawner;
+    private bool hasShot = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +37,7 @@ public class LolipopManBehaviourScript : MonoBehaviour
         }
         if (coolDown <= 0)
         {
+            
             //bouger de haut en bas jusqua un collision et changer pour bas en haut
             //ou peut etre pas
             //si le joueur est a plus ou moins 1 en y du lolipop et a 10 ou moins de x
@@ -45,6 +47,7 @@ public class LolipopManBehaviourScript : MonoBehaviour
                 if (Mathf.Abs(difference.x) <= 10)
                 {
                     animator.SetBool("isAttack", true);
+                    hasShot = false;
                 }
             }
             coolDown = waitTime;
@@ -57,10 +60,11 @@ public class LolipopManBehaviourScript : MonoBehaviour
         {
             
         }*/
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("LolipopMan_CoolDown"))
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("LolipopMan_CoolDown") && !hasShot)
         {
             Instantiate(projectile, spawner.position, Quaternion.identity);
             animator.SetBool("isAttack", false);
+            hasShot = true;
         }
     }
     private void Flip()
