@@ -7,29 +7,65 @@ public class LolipopManBehaviourScript : MonoBehaviour
     private Transform player;
     private float speed = 5;
     private float rangeMoreOrLess = 1;
-    
+    public float waitTime = 1;
+    private float coolDown;
+    private bool facingRight = true;
+
+    public Animator animator;
     public GameObject projectile;
+    private Transform spawner;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        spawner = gameObject.transform.GetChild(0);
+        coolDown = waitTime;
+        Debug.Log(animator);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //bouger de haut en bas jusqua un collision et changer pour bas en haut
-        //transform.position = Vector2.MoveTowards(transform.position, /*mystere.position*/, speed * Time.deltaTime);
-        //si le joueur est a plus ou moins 1 en y du lolipop et a 
-        if (player.position.y - rangeMoreOrLess <= transform.position.y && transform.position.y <= player.position.y + rangeMoreOrLess)
+        if (player.position.x > transform.position.x && !facingRight)
         {
-            Vector2 difference = player.position - transform.position;
-            Debug.Log(Mathf.Abs(difference.x));
-            if (Mathf.Abs(difference.x) <= 10)
-            {
-                Debug.Log("Player in range");
-                Instantiate(projectile, transform.position, Quaternion.identity);
-            }
+            Flip();
         }
+        else if (player.position.x < transform.position.x && facingRight)
+        {
+            Flip();
+        }
+        if (coolDown <= 0)
+        {
+            //bouger de haut en bas jusqua un collision et changer pour bas en haut
+            //ou peut etre pas
+            //si le joueur est a plus ou moins 1 en y du lolipop et a 10 ou moins de x
+            if (player.position.y - rangeMoreOrLess <= transform.position.y && transform.position.y <= player.position.y + rangeMoreOrLess)
+            {
+                Vector2 difference = player.position - transform.position;
+                if (Mathf.Abs(difference.x) <= 10)
+                {
+                    animator.SetBool("isAttack", true);
+                }
+            }
+            coolDown = waitTime;
+        }
+        else
+        {
+            coolDown -= Time.deltaTime;
+        }
+        /*if (animator.GetCurrentAnimatorStateInfo(0).IsName("LolipopMan_Attack"))
+        {
+            
+        }*/
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("LolipopMan_CoolDown"))
+        {
+            Instantiate(projectile, spawner.position, Quaternion.identity);
+            animator.SetBool("isAttack", false);
+        }
+    }
+    private void Flip()
+    {
+        facingRight = !facingRight;
+        transform.Rotate(0, 180, 0);
     }
 }

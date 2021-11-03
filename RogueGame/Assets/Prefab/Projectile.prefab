@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7497113683238832119}
   - component: {fileID: 7497113683238832116}
   - component: {fileID: -1619491328922369967}
-  - component: {fileID: -2803910106007275622}
-  - component: {fileID: 1893707148023705926}
+  - component: {fileID: 664381497746829040}
+  - component: {fileID: 7557571769162471394}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7497113683238832117}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.92, y: 4.4, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -103,7 +103,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &-2803910106007275622
+--- !u!114 &664381497746829040
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,11 +112,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7497113683238832117}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d383b6790d0b742458b5e081c488ea7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f9b78068383592438b8663203b3e3e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
---- !u!50 &1893707148023705926
+  speed: 1
+--- !u!50 &7557571769162471394
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -136,4 +136,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
