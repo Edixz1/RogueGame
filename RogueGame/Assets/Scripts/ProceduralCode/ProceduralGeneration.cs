@@ -17,10 +17,13 @@ public class ProceduralGeneration : MonoBehaviour
     {
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplate>();
         Debug.Log(templates);
-        //Se get Gizmo 0 son transform faire une variable
-        Invoke("Spawn", 2);
-    }
+        Invoke("Spawn", .2f);
 
+    }
+    private void Update()
+    {
+        
+    }
     void Spawn()
     {
         if (!spawned)
@@ -51,12 +54,12 @@ public class ProceduralGeneration : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if(collision.CompareTag("SpawnPoint"))
         {
-            if(collision.GetComponent<ProceduralGeneration>().spawned == false && spawned == false)
+            if (!collision.GetComponent<ProceduralGeneration>().spawned && !spawned)
             {
-                //Instantiate(templates.closerRoom, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
-                Destroy(gameObject);
+                Instantiate(templates.closerRoom, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
             }
             spawned = true;
         }

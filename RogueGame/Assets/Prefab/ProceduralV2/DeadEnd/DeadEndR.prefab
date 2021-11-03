@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4265623562243419683}
+  - component: {fileID: 3066151079620372677}
   m_Layer: 0
   m_Name: DeadEndR
   m_TagString: Rooms
@@ -92,6 +93,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3066151079620372677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8136616582374462409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 331a4768ac239254f8ab334c1b2d8f7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3046654759179615801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2894,15 +2907,15 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1330715772817016658, guid: cb6911b0d9387ec4b8ebfb0bfb2e1718, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cb6911b0d9387ec4b8ebfb0bfb2e1718, type: 3}
---- !u!4 &7880424954302000412 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2936948501336590701, guid: cb6911b0d9387ec4b8ebfb0bfb2e1718,
-    type: 3}
-  m_PrefabInstance: {fileID: 5016666557452117105}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &9205715916980277222 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4206224053310532503, guid: cb6911b0d9387ec4b8ebfb0bfb2e1718,
+    type: 3}
+  m_PrefabInstance: {fileID: 5016666557452117105}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7880424954302000412 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2936948501336590701, guid: cb6911b0d9387ec4b8ebfb0bfb2e1718,
     type: 3}
   m_PrefabInstance: {fileID: 5016666557452117105}
   m_PrefabAsset: {fileID: 0}

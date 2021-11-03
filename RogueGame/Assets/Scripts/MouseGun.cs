@@ -6,29 +6,32 @@ public class MouseGun : MonoBehaviour
 {
     private Transform armsTrans;
     private Vector3 mousePos;
+    private Rigidbody2D rb;
     private void Awake()
     {
-        //armsTrans = transform.Find("arms");
-
+        armsTrans = transform.Find("arms");
+        rb = GetComponent<Rigidbody2D>();
     }
     private void Update()
     {
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        
+        mousePos = Input.mousePosition;
+        mousePos.z = 15; // select distance = 10 units from the camera
+        mousePos = Camera.main.ScreenToWorldPoint(mousePos);
     }
     private void FixedUpdate()
     {
-        /* Vector3 differance = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        /*Vector3 differance = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         differance.Normalize();
-        float rotationZ = Mathf.Atan2(differance.y, differance.x) * Mathf.Rad2Deg - 90f;
+        float rotationZ = Mathf.Atan2(differance.y, differance.x) * Mathf.Rad2Deg;
 
-        transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
+        transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);*/
        
-
-        Vector2 armsDirection = mousePos - transform.position;
+        Vector2 armsDirection = (Vector2)mousePos - rb.position;
+        
         float angle = Mathf.Atan2(armsDirection.y, armsDirection.x) * Mathf.Rad2Deg;
-        transform.eulerAngles = new Vector3(0, 0, angle);
-        Debug.Log(angle);*/
+        armsTrans.eulerAngles = new Vector3(0, 0, angle);
+        //Debug.Log(angle); 
+        
     }
     /* 
      private Vector3 GetMousePosition()
