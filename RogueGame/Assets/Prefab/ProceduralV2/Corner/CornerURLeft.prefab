@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 1280817484149525621}
   - component: {fileID: 999787836997752732}
   - component: {fileID: -6582024166617113350}
+  - component: {fileID: 2749944580300545046}
   m_Layer: 0
   m_Name: CornerURLeft
   m_TagString: Rooms
@@ -185,6 +186,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2749944580300545046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698985033632854191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ef128e20301c449936139df4d07935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ennemiesAlive: 0
+  Ennemies: {fileID: 0}
+  Doors: {fileID: 0}
 --- !u!1001 &702453916787033630
 PrefabInstance:
   m_ObjectHideFlags: 0
