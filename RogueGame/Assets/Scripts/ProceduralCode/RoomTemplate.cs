@@ -9,7 +9,10 @@ public class RoomTemplate : MonoBehaviour
     public GameObject[] leftRooms;
     public GameObject[] rightRooms;
 
+    public GameObject closerRoom;
+
     public List<GameObject> rooms;
+    public List<GameObject> closerRooms;
 
     public float waitTime;
     private bool spawnedBoss;
@@ -24,6 +27,7 @@ public class RoomTemplate : MonoBehaviour
                 if(i == rooms.Count - 1 )
                 {
                     Instantiate(boss, rooms[i].transform.position, Quaternion.identity);
+                    closerRooms[0].SetActive(false);
                     spawnedBoss = true;
                 }
             }
