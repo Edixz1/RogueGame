@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitTime: 2
   animator: {fileID: 7894286648824156746}
-  projectile: {fileID: 7497113683238832117, guid: 32c959eb091dd404e8254c408d4894a6,
+  projectile: {fileID: 6335753193905147308, guid: 80702c2fa0a96f444b7dc98e4489b37f,
     type: 3}
 --- !u!114 &4349571139820917482
 MonoBehaviour:
