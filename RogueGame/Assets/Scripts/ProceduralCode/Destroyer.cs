@@ -6,7 +6,7 @@ public class Destroyer : MonoBehaviour
 {
     private void Start()
     {
-        Destroy(this.gameObject, 1f);
+        //Destroy(this.gameObject, 1f);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

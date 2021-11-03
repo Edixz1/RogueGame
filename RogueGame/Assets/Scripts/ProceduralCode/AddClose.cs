@@ -7,7 +7,5 @@ public class AddClose : MonoBehaviour
     private RoomTemplate temp;
     private void Start()
     {
-        temp = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplate>();
-        temp.closerRooms.Add(this.gameObject);
     }
 }

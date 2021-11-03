@@ -54,14 +54,12 @@ public class ProceduralGeneration : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if(collision.CompareTag("SpawnPoint"))
         {
-            if (collision.GetComponent<ProceduralGeneration>().spawned == false && spawned == false)
+            if (!collision.GetComponent<ProceduralGeneration>().spawned && !spawned)
             {
                 Instantiate(templates.closerRoom, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
-                
-                
-                
             }
             spawned = true;
         }
