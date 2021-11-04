@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 335147040528958154}
   - component: {fileID: 685340893689073267}
   - component: {fileID: 7581483195027469319}
+  - component: {fileID: 6515564207672740972}
   m_Layer: 0
   m_Name: CornerDLUp
   m_TagString: Rooms
@@ -108,7 +109,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ennemiesAlive: 0
-  ennemiesAreAlive: 0
+  Ennemies: {fileID: 0}
+  Doors: {fileID: 0}
+--- !u!50 &6515564207672740972
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335147040528958153}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2196532640454771317
 GameObject:
   m_ObjectHideFlags: 0
