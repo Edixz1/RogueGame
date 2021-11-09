@@ -31,10 +31,17 @@ public class Pickup : MonoBehaviour
             BulletComponent.damage += BulletComponent.damage * item.bulletDamageMultiplier;
             BulletComponent.speed += BulletComponent.speed * item.bulletSpeedMultiplier;
             //BulletComponent.scale = item.bulletSizeMultiplier;
-            
+
             //ajouter l'item a l'inventaire du joueur
-            stats.inventaire.Add(item);
-            
+            if (item.name != "Rince bouche")
+            {
+                stats.inventaire.Add(item);
+                FindObjectOfType<audioManager>().Play("PowerUp");
+            }
+            else
+            {
+                FindObjectOfType<audioManager>().Play("PickUp");
+            }
             //retirer l'item du jeu
             Destroy(gameObject);
         }
