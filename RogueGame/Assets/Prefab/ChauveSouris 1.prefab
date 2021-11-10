@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 7956210319991795431}
   m_Layer: 6
   m_Name: ChauveSouris 1
-  m_TagString: Untagged
+  m_TagString: PewPewGuys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8edbebd07a063c248b46d95263f749ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 5
 --- !u!50 &7956210319991795430
 Rigidbody2D:
   serializedVersion: 4
