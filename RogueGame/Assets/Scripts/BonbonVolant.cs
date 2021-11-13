@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Pathfinding;
 using UnityEngine;
 
 public class BonbonVolant : MonoBehaviour
@@ -17,6 +18,10 @@ public class BonbonVolant : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        if (GetComponent<AIDestinationSetter>().target == null)
+        {
+            GetComponent<AIDestinationSetter>().target = player;
+        }
         timeBtwShots = startTimeBtwShots;
     }
 

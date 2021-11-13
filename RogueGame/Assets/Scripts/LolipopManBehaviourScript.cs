@@ -63,6 +63,7 @@ public class LolipopManBehaviourScript : MonoBehaviour
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("LolipopMan_CoolDown") && !hasShot)
         {
             Instantiate(projectile, spawner.position, Quaternion.identity);
+            FindObjectOfType<audioManager>().Play("EnemyAttack"); 
             animator.SetBool("isAttack", false);
             hasShot = true;
         }
