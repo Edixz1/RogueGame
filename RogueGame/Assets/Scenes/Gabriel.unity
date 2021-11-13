@@ -8106,11 +8106,13 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 0655692d842be3d4290f4150cc8560fa, type: 3}
     volume: 1
     pitch: 3
+    loop: 0
     source: {fileID: 0}
   - name: PlayerIsHit
     clip: {fileID: 8300000, guid: 0655692d842be3d4290f4150cc8560fa, type: 3}
     volume: 1
     pitch: 0.1
+    loop: 0
     source: {fileID: 0}
 --- !u!4 &898514392
 Transform:
@@ -17593,7 +17595,7 @@ PrefabInstance:
     - target: {fileID: 4265623562243419683, guid: 29809725856265247974ed6bcb86fa1e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -26.099339
+      value: -22.26
       objectReference: {fileID: 0}
     - target: {fileID: 4265623562243419683, guid: 29809725856265247974ed6bcb86fa1e,
         type: 3}
