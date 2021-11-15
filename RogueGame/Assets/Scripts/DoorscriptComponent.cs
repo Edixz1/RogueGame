@@ -10,9 +10,9 @@ public class DoorscriptComponent : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        Doors = this.transform.parent.transform.Find("Doors").gameObject;
+        Doors = this.transform.Find("Doors").gameObject;
         Debug.Log(Doors);
-        GameObject Spawner = this.transform.parent.transform.Find("Spawners").gameObject;
+        GameObject Spawner = this.transform.Find("Spawners").gameObject;
         Ennemies = Spawner.transform.GetChild(0).gameObject;
         ennemiesAlive = Ennemies.transform.childCount;
     }
