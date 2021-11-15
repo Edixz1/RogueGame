@@ -37,6 +37,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 848224379682167267, guid: 351dc28544b58bf41b10741bc34abefd,
+        type: 3}
+      propertyPath: m_Name
+      value: marker
+      objectReference: {fileID: 0}
     - target: {fileID: 3859272573538833791, guid: 351dc28544b58bf41b10741bc34abefd,
         type: 3}
       propertyPath: m_Enabled

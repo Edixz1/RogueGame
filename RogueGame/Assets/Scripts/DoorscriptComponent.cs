@@ -8,11 +8,11 @@ public class DoorscriptComponent : MonoBehaviour
     public GameObject Ennemies;
     public GameObject Doors;
     // Start is called before the first frame update
-    void Awake()
+    private void Awake()
     {
-        Doors = this.transform.Find("Doors").gameObject;
+        Doors = this.transform.parent.transform.Find("Doors").gameObject;
         Debug.Log(Doors);
-        GameObject Spawner = this.transform.Find("Spawners").gameObject;
+        GameObject Spawner = this.transform.parent.transform.Find("Spawners").gameObject;
         Ennemies = Spawner.transform.GetChild(0).gameObject;
         ennemiesAlive = Ennemies.transform.childCount;
     }
@@ -25,7 +25,7 @@ public class DoorscriptComponent : MonoBehaviour
                 ennemiesAlive++;
             }
         }
-        if (ennemiesAlive == 0 && collision.gameObject.layer == 10)
+        if (ennemiesAlive == 0 && collision.gameObject.layer == 10 && collision.GetComponent<SpriteRenderer>().isVisible)
         {
             collision.gameObject.SetActive(false);
             Doors.SetActive(false);

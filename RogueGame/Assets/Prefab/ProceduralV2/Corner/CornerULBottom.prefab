@@ -1,17 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &1082198209272740368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3968565580184002736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40716e9fe75693d43bedd411701d1257, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2933505735149102859
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,6 +183,18 @@ Transform:
   m_Father: {fileID: 5228700746751303826}
   m_RootOrder: 57
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1082198209272740368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3968565580184002736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40716e9fe75693d43bedd411701d1257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &296526957042869073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -355,7 +355,7 @@ PrefabInstance:
     - target: {fileID: 4433366163052921349, guid: fa1ddb7bde2ae8943af172624db73bfa,
         type: 3}
       propertyPath: m_Name
-      value: Mur (53)
+      value: marker
       objectReference: {fileID: 0}
     - target: {fileID: 8554109529814078090, guid: fa1ddb7bde2ae8943af172624db73bfa,
         type: 3}
