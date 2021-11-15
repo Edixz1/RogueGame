@@ -137,5 +137,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11e038f2bb4754549bef7386cfeb1ac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTimeBtwSpawns: 0
+  startTimeBtwSpawns: 0.2
   trail: {fileID: 7210227187437850456, guid: 92d554770f1093c4ba057841fe686379, type: 3}
