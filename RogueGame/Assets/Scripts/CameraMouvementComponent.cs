@@ -5,8 +5,8 @@ using UnityEngine;
 public class CameraMouvementComponent : MonoBehaviour
 {
     private float SafeValue = 0.33f;
-    private float ValueHorizontale = 33.189f;
-    private float valueVerticale = 18.81f;
+    private float ValueHorizontale = 31.2f;
+    private float valueVerticale = 16.8f;
     public GameObject Camera;
     public GameObject Personnage;
 
