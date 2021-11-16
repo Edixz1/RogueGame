@@ -3153,6 +3153,23 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -7.52
       objectReference: {fileID: 0}
+    - target: {fileID: 3243354250272310849, guid: f2c8d4e3979d6f04480a10f5c737708f,
+        type: 3}
+      propertyPath: ObjectToSpawn.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243354250272310849, guid: f2c8d4e3979d6f04480a10f5c737708f,
+        type: 3}
+      propertyPath: ObjectToSpawn.Array.data[0]
+      value: 
+      objectReference: {fileID: 4067892004910416381, guid: 0db70f63e54f1f947bcfcbb694388cbe,
+        type: 3}
+    - target: {fileID: 3243354250272310849, guid: f2c8d4e3979d6f04480a10f5c737708f,
+        type: 3}
+      propertyPath: ObjectToSpawn.Array.data[1]
+      value: 
+      objectReference: {fileID: 2122332344671467298, guid: 7e1b3f7e658bbd6438f14ea38e0073ee,
+        type: 3}
     - target: {fileID: 3243354250272310850, guid: f2c8d4e3979d6f04480a10f5c737708f,
         type: 3}
       propertyPath: m_RootOrder

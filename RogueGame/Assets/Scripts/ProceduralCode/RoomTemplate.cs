@@ -25,6 +25,7 @@ public class RoomTemplate : MonoBehaviour
             {
                 if (i == rooms.Count - 1)
                 {
+                    AstarPath.active.Scan();
                     Instantiate(bossCleaner, rooms[rooms.Count-1].transform.position, Quaternion.identity);
                     Invoke("SummonBoss", 1f);
                     spawnedBoss = true;
@@ -38,9 +39,7 @@ public class RoomTemplate : MonoBehaviour
     }
     private void SummonBoss() 
     {
-        Debug.Log("allright");
-       
         Instantiate(boss, rooms[rooms.Count - 1].transform.position, Quaternion.identity);
-        AstarPath.active.Scan();
+        
     }
 }
