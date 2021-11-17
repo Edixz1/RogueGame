@@ -25,7 +25,7 @@ public class DoorscriptComponent : MonoBehaviour
                 ennemiesAlive++;
             }
         }
-        if (ennemiesAlive == 0 && collision.gameObject.layer == 10 && collision.GetComponent<SpriteRenderer>().isVisible)
+        if (ennemiesAlive == 0 && collision.gameObject.layer == 10 && Doors.transform.parent.Find("marker").GetComponent<SpriteRenderer>().isVisible)
         {
             collision.gameObject.SetActive(false);
             Doors.SetActive(false);
