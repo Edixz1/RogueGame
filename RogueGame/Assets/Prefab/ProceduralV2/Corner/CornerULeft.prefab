@@ -4420,7 +4420,7 @@ PrefabInstance:
     - target: {fileID: 1330715772817016658, guid: cb6911b0d9387ec4b8ebfb0bfb2e1718,
         type: 3}
       propertyPath: openingDirection
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2936948501336590701, guid: cb6911b0d9387ec4b8ebfb0bfb2e1718,
         type: 3}

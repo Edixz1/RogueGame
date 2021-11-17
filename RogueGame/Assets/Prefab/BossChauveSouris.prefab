@@ -45,12 +45,12 @@ GameObject:
   - component: {fileID: 3589710422265757227}
   - component: {fileID: 895187074090142527}
   - component: {fileID: 6118218673369013141}
-  - component: {fileID: 5166611619500944864}
   - component: {fileID: 5278062521308892755}
   - component: {fileID: 5278062521308892746}
   - component: {fileID: 5278062521308892752}
   - component: {fileID: 5278062521308892753}
   - component: {fileID: 5278062521308892754}
+  - component: {fileID: 7078481430800237261}
   m_Layer: 6
   m_Name: BossChauveSouris
   m_TagString: PewPewGuys
@@ -170,19 +170,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5166611619500944864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6238946062687582578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8edbebd07a063c248b46d95263f749ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 20
 --- !u!50 &5278062521308892755
 Rigidbody2D:
   serializedVersion: 4
@@ -297,6 +284,19 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
+--- !u!114 &7078481430800237261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6238946062687582578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbda1da3663563a4e941d11903fc6324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 0}
 --- !u!1001 &1650592718270880892
 PrefabInstance:
   m_ObjectHideFlags: 0
