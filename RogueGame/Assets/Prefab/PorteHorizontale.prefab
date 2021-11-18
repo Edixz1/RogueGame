@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1137624240985073790, guid: 3cbc9dce356240842a919461f0bedf05,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4199937902634738160, guid: 3cbc9dce356240842a919461f0bedf05,
         type: 3}
       propertyPath: m_IsTrigger
@@ -16,6 +21,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PorteHorizontale
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347799213658417500, guid: 3cbc9dce356240842a919461f0bedf05,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8349605108256746540, guid: 3cbc9dce356240842a919461f0bedf05,
         type: 3}

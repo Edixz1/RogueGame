@@ -33,24 +33,39 @@ public class DoorscriptComponent : MonoBehaviour
         ennemiesAlive = 0;
     }
 
-    //private void OnCollisionStay2D(Collision2D collision)
-    //{
-    //    ennemiesAlive = 0;
-    //    for (int i = 0; i < Ennemies.transform.childCount; i++)
-    //    {
-    //        if (Ennemies.transform.GetChild(i).gameObject.activeInHierarchy)
-    //        {
-    //            ennemiesAlive++;
-    //        }
-    //    }
-    //    Debug.Log("pogers");
-    //    if (ennemiesAlive == 0 && collision.gameObject.layer == 10)
-    //    {
-    //        collision.gameObject.SetActive(false);
-    //        Doors.SetActive(false);
-    //    }
-    //    ennemiesAlive = 0;
-    //}
+    /* private void OnCollisionStay2D(Collision2D collision)
+     {
+         for (int i = 0; i < Ennemies.transform.childCount; i++)
+         {
+             if (Ennemies.transform.GetChild(i).gameObject.activeInHierarchy)
+             {
+                 ennemiesAlive++;
+             }
+         }
+         Debug.Log("KOKOKOKOKO" + collision.gameObject.layer);
+         if (ennemiesAlive == 0 && collision.gameObject.layer == 10 && Doors.transform.parent.Find("marker").GetComponent<SpriteRenderer>().isVisible)
+         {
+             collision.gameObject.SetActive(false);
+             Doors.SetActive(false);
+         }
+         ennemiesAlive = 0;
+     }
+
+       for (int i = 0; i < Ennemies.transform.childCount; i++)
+         {
+             if (Ennemies.transform.GetChild(i).gameObject.activeInHierarchy)
+             {
+                 ennemiesAlive++;
+             }
+         }
+         Debug.Log("pogers");
+         if (ennemiesAlive == 0 && collision.gameObject.layer == 10)
+         {
+             collision.gameObject.SetActive(false);
+             Doors.SetActive(false);
+         }
+         ennemiesAlive = 0;
+      */
     //private void OnCollisionEnter2D(Collision2D collision)
     //{
     //    Debug.Log("pog");

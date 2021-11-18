@@ -181,6 +181,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8614660416677679691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5228186014717016286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40716e9fe75693d43bedd411701d1257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &144514695829526419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3678,6 +3690,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5987603146858037368}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5228186014717016286 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1987778674918914214, guid: e5b014aaeca3a8f4aaff6c910c224399,
+    type: 3}
+  m_PrefabInstance: {fileID: 5987603146858037368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6005398084901682492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4206,6 +4224,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spawners
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243354250272310851, guid: f2c8d4e3979d6f04480a10f5c737708f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3243354250373955055, guid: f2c8d4e3979d6f04480a10f5c737708f,
         type: 3}

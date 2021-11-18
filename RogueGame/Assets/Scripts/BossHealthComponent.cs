@@ -8,11 +8,11 @@ public class BossHealthComponent : MonoBehaviour
 
     public static float health;
     public float maxHealth;
-    public Slider slider;
+    //public Slider slider;
     // Start is called before the first frame update
     void Start()
     {
-        slider.maxValue = maxHealth;
+        //slider.maxValue = maxHealth;
         health = maxHealth;
     }
     public void TakeDomage(float damage)
@@ -21,7 +21,7 @@ public class BossHealthComponent : MonoBehaviour
         FindObjectOfType<audioManager>().Play("EnemyIsHit");
         if (health <= 0)
         {
-            slider.value = 0;
+            //slider.value = 0;
             Die();
         }
     }
@@ -34,7 +34,7 @@ public class BossHealthComponent : MonoBehaviour
     {
         if (health > 0)
         {
-            slider.value = health;
+            //slider.value = health;
         }
     }
 }

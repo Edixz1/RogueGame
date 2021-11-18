@@ -5385,7 +5385,7 @@ PrefabInstance:
     - target: {fileID: 4433366163052921349, guid: fa1ddb7bde2ae8943af172624db73bfa,
         type: 3}
       propertyPath: m_Name
-      value: Marker
+      value: marker
       objectReference: {fileID: 0}
     - target: {fileID: 8554109529814078090, guid: fa1ddb7bde2ae8943af172624db73bfa,
         type: 3}
@@ -5821,7 +5821,17 @@ PrefabInstance:
     - target: {fileID: 1795143936542474211, guid: 67e1b5bab2e6d7049b0fc99619ccc075,
         type: 3}
       propertyPath: m_Name
-      value: SpawnersBoss
+      value: Spawners
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795143936542474211, guid: 67e1b5bab2e6d7049b0fc99619ccc075,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795143937319911876, guid: 67e1b5bab2e6d7049b0fc99619ccc075,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67e1b5bab2e6d7049b0fc99619ccc075, type: 3}
