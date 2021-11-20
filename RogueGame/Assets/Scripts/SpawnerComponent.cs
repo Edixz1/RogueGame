@@ -7,7 +7,7 @@ public class SpawnerComponent : MonoBehaviour
     public Transform[] spawnZones;
 
     [SerializeField]
-    public GameObject[] enemies;
+    public GameObject[] ObjectToSpawn;
 
     [SerializeField]
     private List<GameObject> enemyList = new List<GameObject>();
@@ -26,8 +26,8 @@ public class SpawnerComponent : MonoBehaviour
     {
         for (int i = 0; i < spawnZones.Length; i++)
         {
-            randomEnemmy = Random.Range(0, enemies.Length); // grab random ennemy
-            enemyList.Add(spawnEnemies(enemies[randomEnemmy], spawnZones[i].transform));
+            randomEnemmy = Random.Range(0, ObjectToSpawn.Length); // grab random ennemy
+            enemyList.Add(spawnEnemies(ObjectToSpawn[randomEnemmy], spawnZones[i].transform));
             //enemyList.Add(Instantiate(enemies[randomEnemmy], spawnZones[i].transform.position, Quaternion.identity));
         }
         

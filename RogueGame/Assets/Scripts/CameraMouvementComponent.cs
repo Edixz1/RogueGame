@@ -4,30 +4,33 @@ using UnityEngine;
 
 public class CameraMouvementComponent : MonoBehaviour
 {
-    private float SafeValue = 0.33f;
-    private float ValueHorizontale = 33.189f;
-    private float valueVerticale = 18.81f;
+    private float ValueHorizontale = 31.2f;
+    private float valueVerticale = 16.8f;
     public GameObject Camera;
     public GameObject Personnage;
 
 
     void Update()
     {
+        //gauche
         if (Personnage.transform.position.x - Camera.transform.position.x >= ValueHorizontale /2)
         { 
-            Camera.transform.position = new Vector3(Camera.transform.position.x + ValueHorizontale + SafeValue,Personnage.transform.position.y,Camera.transform.position.z);
+            Camera.transform.position = new Vector3(Camera.transform.position.x + ValueHorizontale, Camera.transform.position.y,Camera.transform.position.z);
         }
+        //droite
         if(Camera.transform.position.x - Personnage.transform.position.x >= ValueHorizontale / 2)
         {
-           Camera.transform.position = new Vector3(Camera.transform.position.x - ValueHorizontale - SafeValue, Personnage.transform.position.y, Camera.transform.position.z);
+           Camera.transform.position = new Vector3(Camera.transform.position.x - ValueHorizontale, Camera.transform.position.y, Camera.transform.position.z);
         }
+        //haut
         if (Personnage.transform.position.y - Camera.transform.position.y >= valueVerticale /2)
         {
-            Camera.transform.position = new Vector3(Camera.transform.position.x, Camera.transform.position.y + valueVerticale + SafeValue, Camera.transform.position.z);
+            Camera.transform.position = new Vector3(Camera.transform.position.x, Camera.transform.position.y + valueVerticale, Camera.transform.position.z);
         }
-        if(Camera.transform.position.y - Personnage.transform.position.y >= ValueHorizontale / 2)
+        //bas
+        if(Camera.transform.position.y - Personnage.transform.position.y >= valueVerticale / 2)
         {
-           Camera.transform.position = new Vector3(Camera.transform.position.x, Camera.transform.position.y - valueVerticale - SafeValue, Camera.transform.position.z);
+           Camera.transform.position = new Vector3(Camera.transform.position.x, Camera.transform.position.y - valueVerticale, Camera.transform.position.z);
         }
     }
 }

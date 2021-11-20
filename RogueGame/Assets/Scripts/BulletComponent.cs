@@ -28,8 +28,14 @@ public class BulletComponent : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         EnnemieComponent ennemie = collision.GetComponent<EnnemieComponent>();
-        
-        if(ennemie != null)
+        BossHealthComponent boss = collision.GetComponent<BossHealthComponent>();
+
+        if (boss != null)
+        {
+            boss.TakeDomage(damage);
+        }
+
+        if (ennemie != null)
         {
             ennemie.TakeDomage(damage);
         }

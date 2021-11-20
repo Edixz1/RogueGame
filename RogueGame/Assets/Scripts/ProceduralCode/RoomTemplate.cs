@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Pathfinding;
 public class RoomTemplate : MonoBehaviour
 {
     public GameObject[] bottomRooms;
@@ -15,18 +15,21 @@ public class RoomTemplate : MonoBehaviour
 
     public float waitTime;
     private bool spawnedBoss;
-    public GameObject boss;
-
+    public GameObject bossRoom;
+    //public GameObject bossCleaner;
+    //public GameObject boss;
     private void Update()
     {
+
         if(waitTime <= 0 && !spawnedBoss) 
         {
             for (int i = 0; i < rooms.Count; i++)
             {
-                if(i == rooms.Count - 1 )
+                if (i == rooms.Count - 1)
                 {
-                    Instantiate(boss, rooms[i].transform.position, Quaternion.identity);
-
+                    
+                    //Instantiate(bossCleaner, rooms[rooms.Count-1].transform.position, Quaternion.identity);
+                    Invoke("SummonBoss", 1f);
                     spawnedBoss = true;
                 }
             }
@@ -35,5 +38,13 @@ public class RoomTemplate : MonoBehaviour
         {
             waitTime -= Time.deltaTime;
         }
+    }
+    private void SummonBoss() 
+    {
+        int lastRoomIndex = rooms.Count - 1;
+        Vector3 lastRoomPosition = rooms[lastRoomIndex].transform.position;
+        Destroy(rooms[lastRoomIndex]);
+        Instantiate(bossRoom, lastRoomPosition, Quaternion.identity);
+        AstarPath.active.Scan();
     }
 }
