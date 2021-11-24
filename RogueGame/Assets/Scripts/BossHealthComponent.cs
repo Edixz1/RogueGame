@@ -8,14 +8,12 @@ public class BossHealthComponent : MonoBehaviour
 
     public static float health;
     public float maxHealth;
-    private GameObject bar;
     private Slider slider;
     // Start is called before the first frame update
     void Start()
     {
-        bar = GameObject.FindGameObjectWithTag("BossBar");
-        bar.SetActive(true);
-        slider = bar.GetComponent<Slider>();
+        RoomTemplate.bar.SetActive(true);
+        slider = RoomTemplate.bar.GetComponent<Slider>();
         slider.maxValue = maxHealth;
         health = maxHealth;
     }
@@ -31,6 +29,8 @@ public class BossHealthComponent : MonoBehaviour
     }
     void Die()
     {
+        RoomTemplate.bar.SetActive(false);
+
         Destroy(gameObject);
     }
     // Update is called once per frame
