@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3762000808680171811}
   - component: {fileID: 7259183078924521033}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: sprite_Mur0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 8349605108256746540}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &7259183078924521033
 SpriteRenderer:
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 1137624240985073790}
   - component: {fileID: 8347799213658417500}
   - component: {fileID: 7419043385261972693}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8349605108256746540}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8347799213658417500
 SpriteRenderer:
@@ -223,8 +223,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 4, z: 1}
   m_Children:
-  - {fileID: 3762000808680171811}
   - {fileID: 1137624240985073790}
+  - {fileID: 3762000808680171811}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

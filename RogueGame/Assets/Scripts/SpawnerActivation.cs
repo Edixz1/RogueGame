@@ -10,10 +10,11 @@ public class SpawnerActivation : MonoBehaviour
         Component doorsscript = this.transform.parent.gameObject.GetComponent<DoorscriptComponent>();
         spawners.SetActive(true);
         GameObject doors = this.transform.parent.transform.Find("Doors").gameObject;
-        for (int i=0;i < doors.transform.childCount;i++)
+        for (int i = 0; i < doors.transform.childCount; i++)
         {
             doors.transform.GetChild(i).gameObject.SetActive(true);
         }
+        Debug.Log("sup bru");
     }
     
 }
