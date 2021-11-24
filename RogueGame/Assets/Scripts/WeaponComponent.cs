@@ -12,6 +12,7 @@ public class WeaponComponent : MonoBehaviour
     public void Shoot()
     {
         Instantiate(bulletPrefab, canon.position, canon.rotation);
+        FindObjectOfType<audioManager>().Play("Shoot");
         /*RaycastHit2D hitInfo = Physics2D.Raycast(canon.position, canon.right);
         if (hitInfo)
         {

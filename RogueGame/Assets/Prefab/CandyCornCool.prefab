@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
+  drop: {fileID: 6611946632673023858, guid: 7e8efc8f572c932448e1321b74d86b93, type: 3}
 --- !u!114 &4448379429158942529
 MonoBehaviour:
   m_ObjectHideFlags: 0
