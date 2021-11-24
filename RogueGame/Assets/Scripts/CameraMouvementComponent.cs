@@ -23,12 +23,12 @@ public class CameraMouvementComponent : MonoBehaviour
            Camera.transform.position = new Vector3(Camera.transform.position.x - ValueHorizontale, Camera.transform.position.y, Camera.transform.position.z);
         }
         //haut
-        if (Personnage.transform.position.y - Camera.transform.position.y >= valueVerticale /2)
+        if (Personnage.transform.position.y - Camera.transform.position.y >= 17.5f /2)
         {
             Camera.transform.position = new Vector3(Camera.transform.position.x, Camera.transform.position.y + valueVerticale, Camera.transform.position.z);
         }
         //bas
-        if(Camera.transform.position.y - Personnage.transform.position.y >= valueVerticale / 2)
+        if(Camera.transform.position.y - Personnage.transform.position.y >= 17.5f / 2)
         {
            Camera.transform.position = new Vector3(Camera.transform.position.x, Camera.transform.position.y - valueVerticale, Camera.transform.position.z);
         }

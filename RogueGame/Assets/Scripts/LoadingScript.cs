@@ -16,7 +16,7 @@ public class LoadingScript : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         AsyncOperation gameLevel = SceneManager.LoadSceneAsync("DemoGame2.0");
-        gameLevel.allowSceneActivation = false;
+        gameLevel.allowSceneActivation = true;
 
         while (timer <= 5)
         {

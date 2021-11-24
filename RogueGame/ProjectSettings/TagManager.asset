@@ -11,6 +11,7 @@ TagManager:
   - SpawnPoint
   - Closer
   - Wall
+  - BossBar
   layers:
   - Default
   - TransparentFX

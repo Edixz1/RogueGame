@@ -69,8 +69,58 @@ public class HeartComponent : MonoBehaviour
             }
         }
 
-
-        switch (Mathf.Round(slider.normalizedValue * 10))
+        if (Mathf.Round(slider.value) == slider.maxValue)
+        {
+            Dent.gameObject.SetActive(true);
+            Dent1.gameObject.SetActive(false);
+            Dent2.gameObject.SetActive(false);
+            Dent3.gameObject.SetActive(false);
+            Dent4.gameObject.SetActive(false);
+        }
+        else if (Mathf.Round(slider.value) == Mathf.Round((slider.maxValue*70)/100))
+        {
+            Dent.gameObject.SetActive(true);
+            Dent1.gameObject.SetActive(false);
+            Dent2.gameObject.SetActive(false);
+            Dent3.gameObject.SetActive(false);
+            Dent4.gameObject.SetActive(false);
+        }
+        else if (Mathf.Round(slider.value) == Mathf.Round((slider.maxValue * 60) / 100))
+        {
+            Dent.gameObject.SetActive(false);
+            Dent1.gameObject.SetActive(true);
+            Dent2.gameObject.SetActive(false);
+            Dent3.gameObject.SetActive(false);
+            Dent4.gameObject.SetActive(false);
+        }
+        else if (Mathf.Round(slider.value) == Mathf.Round((slider.maxValue * 50) / 100))
+        {
+            Dent.gameObject.SetActive(false);
+            Dent1.gameObject.SetActive(false);
+            Dent2.gameObject.SetActive(true);
+            Dent3.gameObject.SetActive(false);
+            Dent4.gameObject.SetActive(false);
+        }
+        else if (Mathf.Round(slider.value) == Mathf.Round((slider.maxValue * 40) / 100))
+        {
+            Dent.gameObject.SetActive(false);
+            Dent1.gameObject.SetActive(false);
+            Dent2.gameObject.SetActive(false);
+            Dent3.gameObject.SetActive(true);
+            Dent4.gameObject.SetActive(false);
+        }
+        else if (Mathf.Round(slider.value) <= 0)
+        {
+            Dent.gameObject.SetActive(false);
+            Dent1.gameObject.SetActive(false);
+            Dent2.gameObject.SetActive(false);
+            Dent3.gameObject.SetActive(false);
+            Dent4.gameObject.SetActive(true);
+            gameOver.gameObject.SetActive(true);
+            Time.timeScale = 0;
+        }
+        /*
+        switch (Mathf.Round(slider.normalizedValue *10))
         {
             case 10:
                 Dent.gameObject.SetActive(true);
@@ -121,7 +171,7 @@ public class HeartComponent : MonoBehaviour
                 gameOver.gameObject.SetActive(true);
                 Time.timeScale = 0;
                 break;
-        }
+        }*/
 
 
         if (health > slider.maxValue) health = slider.maxValue;

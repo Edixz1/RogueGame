@@ -8,11 +8,13 @@ public class BossHealthComponent : MonoBehaviour
 
     public static float health;
     public float maxHealth;
-    //public Slider slider;
+    private Slider slider;
     // Start is called before the first frame update
     void Start()
     {
-        //slider.maxValue = maxHealth;
+        RoomTemplate.bar.SetActive(true);
+        slider = RoomTemplate.bar.GetComponent<Slider>();
+        slider.maxValue = maxHealth;
         health = maxHealth;
     }
     public void TakeDomage(float damage)
@@ -21,12 +23,14 @@ public class BossHealthComponent : MonoBehaviour
         FindObjectOfType<audioManager>().Play("EnemyIsHit");
         if (health <= 0)
         {
-            //slider.value = 0;
+            slider.value = 0;
             Die();
         }
     }
     void Die()
     {
+        RoomTemplate.bar.SetActive(false);
+
         Destroy(gameObject);
     }
     // Update is called once per frame
@@ -34,7 +38,7 @@ public class BossHealthComponent : MonoBehaviour
     {
         if (health > 0)
         {
-            //slider.value = health;
+            slider.value = health;
         }
     }
 }

@@ -21,6 +21,7 @@ public class PlayerComponent : MonoBehaviour
 
     private bool isFacingRight = true;
     private bool isDashing = false;
+    private bool canIDash = true;
     private bool isCoolDown = false;
     private bool isPause = false;
 
@@ -37,12 +38,27 @@ public class PlayerComponent : MonoBehaviour
     }
     void Update()
     {
-        rb.velocity = new Vector2(horizontal * movementSpeed, vertical * movementSpeed);
-        HandleDash();
 
-        RaycastHit2D raycastHit = Physics2D.Raycast(transform.position, lastMovement, dashDistance);
-        //Debug.Log(raycastHit.collider);
-        //Debug.DrawLine(rb.position, new Vector2(transform.position.x + (lastMovement.x * dashDistance), transform.position.y + (lastMovement.y * dashDistance)), Color.red, 2);
+        rb.velocity = new Vector2(horizontal * movementSpeed, vertical * movementSpeed);
+        
+        
+        HandleDash();
+        /*RaycastHit hit;
+        if (Physics.Raycast(rb.position, new Vector2(transform.position.x + (lastMovement.x * dashDistance), transform.position.y + (lastMovement.y * dashDistance)), out hit, Mathf.Infinity, 7))
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+            Debug.Log("Did Hit");
+        }
+        else
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+            Debug.Log("Did not Hit");
+        }*/
+        
+
+       // RaycastHit2D raycastHit = Physics2D.Raycast(new Vector2 (rb.position.x,rb.position.y), new Vector2(transform.position.x, transform.position.y), dashDistance, 7);
+        //Debug.Log("WOOOOOOOOOOOOOOOW"+ raycastHit.collider);
+       // Debug.DrawLine(new Vector2(rb.position.x, rb.position.y), new Vector2(transform.position.x + (lastMovement.x * dashDistance), transform.position.y + (lastMovement.y * dashDistance)), Color.red, 2);
        /* if (!isFacingRight && horizontal > 0f)
         {
             Flip();
@@ -111,20 +127,34 @@ public class PlayerComponent : MonoBehaviour
         }
 
     }
+    public void Pause()
+    {
+        isPause = !isPause;
+        if (isPause)
+        {
+
+            menuPause.SetActive(true);
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+            menuPause.SetActive(false);
+        }
+
+    }
 
     public void Dash(InputAction.CallbackContext context)
     {
-        if(isCoolDown == false)
+        if(isCoolDown == false && canIDash)
             isDashing = true;
     }
     
     public static IEnumerator Blink()
     {
-        Debug.Log("Started Coroutine at timestamp : " + Time.time);
         sr.color = new Color(1,1,1,0);
         yield return new WaitForSeconds(.1f);
         sr.color = new Color(1, 1, 1, 1);
-        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
     }
 
 

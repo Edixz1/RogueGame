@@ -16,8 +16,14 @@ public class RoomTemplate : MonoBehaviour
     public float waitTime;
     private bool spawnedBoss;
     public GameObject bossRoom;
+    public static GameObject bar;
     //public GameObject bossCleaner;
     //public GameObject boss;
+    private void Start()
+    {
+        bar = GameObject.FindGameObjectWithTag("BossBar");
+        bar.SetActive(false);
+    }
     private void Update()
     {
 
