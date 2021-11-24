@@ -8,11 +8,15 @@ public class BossHealthComponent : MonoBehaviour
 
     public static float health;
     public float maxHealth;
-    //public Slider slider;
+    private GameObject bar;
+    private Slider slider;
     // Start is called before the first frame update
     void Start()
     {
-        //slider.maxValue = maxHealth;
+        bar = GameObject.FindGameObjectWithTag("BossBar");
+        bar.SetActive(true);
+        slider = bar.GetComponent<Slider>();
+        slider.maxValue = maxHealth;
         health = maxHealth;
     }
     public void TakeDomage(float damage)
@@ -21,7 +25,7 @@ public class BossHealthComponent : MonoBehaviour
         FindObjectOfType<audioManager>().Play("EnemyIsHit");
         if (health <= 0)
         {
-            //slider.value = 0;
+            slider.value = 0;
             Die();
         }
     }
@@ -34,7 +38,7 @@ public class BossHealthComponent : MonoBehaviour
     {
         if (health > 0)
         {
-            //slider.value = health;
+            slider.value = health;
         }
     }
 }

@@ -16,6 +16,7 @@ public class RoomTemplate : MonoBehaviour
     public float waitTime;
     private bool spawnedBoss;
     public GameObject bossRoom;
+    private GameObject bar;
     //public GameObject bossCleaner;
     //public GameObject boss;
     private void Update()
