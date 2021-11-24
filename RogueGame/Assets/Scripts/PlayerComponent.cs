@@ -120,11 +120,9 @@ public class PlayerComponent : MonoBehaviour
     
     public static IEnumerator Blink()
     {
-        Debug.Log("Started Coroutine at timestamp : " + Time.time);
         sr.color = new Color(1,1,1,0);
         yield return new WaitForSeconds(.1f);
         sr.color = new Color(1, 1, 1, 1);
-        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
     }
 
 

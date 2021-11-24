@@ -14,8 +14,6 @@ public class SpawnerActivation : MonoBehaviour
         {
             doors.transform.GetChild(i).gameObject.SetActive(true);
         }
-        Debug.Log("this shit works right");
-        //doorsscript
     }
     
 }
