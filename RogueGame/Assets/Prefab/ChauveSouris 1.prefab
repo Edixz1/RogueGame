@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+  drop: {fileID: 6611946632673023858, guid: 7e8efc8f572c932448e1321b74d86b93, type: 3}
 --- !u!50 &7956210319991795430
 Rigidbody2D:
   serializedVersion: 4

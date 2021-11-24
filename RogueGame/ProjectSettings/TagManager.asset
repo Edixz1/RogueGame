@@ -12,6 +12,7 @@ TagManager:
   - Closer
   - Wall
   - BossBar
+  - heal
   layers:
   - Default
   - TransparentFX
