@@ -7,6 +7,7 @@ public class DoorscriptComponent : MonoBehaviour
     public int ennemiesAlive;
     public GameObject Ennemies;
     public GameObject Doors;
+    //public Animator animator;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -27,6 +28,7 @@ public class DoorscriptComponent : MonoBehaviour
         }
         if (ennemiesAlive == 0 && collision.gameObject.layer ==10  && Doors.transform.parent.Find("marker").GetComponent<SpriteRenderer>().isVisible)
         {
+            //animator.SetBool("isOpen", true);
             collision.gameObject.SetActive(false);
             //Doors.SetActive(false);
             Debug.Log("doors open ABRACADABRA" +collision.gameObject.name);

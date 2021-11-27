@@ -17,12 +17,15 @@ public class RoomTemplate : MonoBehaviour
     private bool spawnedBoss;
     public GameObject bossRoom;
     public static GameObject bar;
+    public static GameObject victory;
     //public GameObject bossCleaner;
     //public GameObject boss;
     private void Start()
     {
         bar = GameObject.FindGameObjectWithTag("BossBar");
+        victory = GameObject.FindGameObjectWithTag("Victory");
         bar.SetActive(false);
+        victory.SetActive(false);
     }
     private void Update()
     {
