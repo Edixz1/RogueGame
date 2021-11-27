@@ -30,8 +30,9 @@ public class BossHealthComponent : MonoBehaviour
     void Die()
     {
         RoomTemplate.bar.SetActive(false);
+        RoomTemplate.bar.SetActive(true);
 
-        Destroy(gameObject);
+        Destroy(gameObject,1f);
     }
     // Update is called once per frame
     void Update()
