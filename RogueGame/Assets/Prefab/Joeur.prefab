@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 181839545541529994}
   - component: {fileID: 8694208840868488012}
   - component: {fileID: 388459935860769214}
+  - component: {fileID: 893190040814942183}
   m_Layer: 9
   m_Name: Joeur
   m_TagString: Untagged
@@ -156,6 +157,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &893190040814942183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4961643501956763845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bf7e21cd41e15547a80be42c2001eda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skins:
+  - {fileID: 21300000, guid: 0ffa82736fa422d4fab513cf3992edea, type: 3}
+  - {fileID: 21300000, guid: e31417df76bdc004f83d43900d28e39a, type: 3}
 --- !u!1 &7759139027860344634
 GameObject:
   m_ObjectHideFlags: 0

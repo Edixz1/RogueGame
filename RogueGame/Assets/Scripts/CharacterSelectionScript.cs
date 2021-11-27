@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterSelectionScript : MonoBehaviour
 {
     public GameObject[] Characters;
-    public int selectedCharacter = 0;
+     static public int selectedCharacter = 0;
     // Start is called before the first frame update
     public void NextCharacter()
     {
