@@ -13,12 +13,12 @@ public class CameraMouvementComponent : MonoBehaviour
     void Update()
     {
         //gauche
-        if (Personnage.transform.position.x - Camera.transform.position.x >= ValueHorizontale /2)
+        if (Personnage.transform.position.x - Camera.transform.position.x >= 32f /2)
         { 
             Camera.transform.position = new Vector3(Camera.transform.position.x + ValueHorizontale, Camera.transform.position.y,Camera.transform.position.z);
         }
         //droite
-        if(Camera.transform.position.x - Personnage.transform.position.x >= ValueHorizontale / 2)
+        if(Camera.transform.position.x - Personnage.transform.position.x >= 32f / 2)
         {
            Camera.transform.position = new Vector3(Camera.transform.position.x - ValueHorizontale, Camera.transform.position.y, Camera.transform.position.z);
         }
