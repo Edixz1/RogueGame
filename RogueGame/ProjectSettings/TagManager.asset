@@ -13,6 +13,7 @@ TagManager:
   - Wall
   - BossBar
   - heal
+  - Victory
   layers:
   - Default
   - TransparentFX
@@ -21,11 +22,11 @@ TagManager:
   - Water
   - UI
   - Ennemie
-  - Wall
+  - 
   - PostProcessing
   - Player
   - Door
-  - 
+  - Wall
   - 
   - 
   - 
