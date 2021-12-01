@@ -21,17 +21,16 @@ public class PlayerComponent : MonoBehaviour
 
     private bool isFacingRight = true;
     private bool isDashing = false;
-    private bool canIDash = true;
     private bool isCoolDown = false;
+    private LayerMask wall;
     private bool isPause = false;
-
 
     static SpriteRenderer sr;
     public static bool isBlinking = false;
 
     private void Start()
     {
-        
+        wall = 11;
         menuPause.SetActive(false);
         abilityDash.fillAmount = 0;
         sr = GetComponent<SpriteRenderer>();
@@ -40,8 +39,19 @@ public class PlayerComponent : MonoBehaviour
     {
 
         rb.velocity = new Vector2(horizontal * movementSpeed, vertical * movementSpeed);
-        
-        
+
+        RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x + (lastMovement.x * dashDistance), transform.position.y + (lastMovement.y * dashDistance)), lastMovement);
+        if (Physics2D.Raycast(new Vector2(transform.position.x + (lastMovement.x * dashDistance), transform.position.y + (lastMovement.y * dashDistance)), lastMovement,dashDistance,11))
+        {
+            Debug.Log(hit.collider);
+            Debug.DrawRay(new Vector2(transform.position.x + (lastMovement.x * dashDistance), transform.position.y + (lastMovement.y * dashDistance)), lastMovement, Color.blue, 2);
+        }
+        else
+        Debug.DrawRay(new Vector2(transform.position.x + (lastMovement.x * dashDistance), transform.position.y + (lastMovement.y * dashDistance)), lastMovement,Color.red,2);
+      
+
+         
+
         HandleDash();
         /*RaycastHit hit;
         if (Physics.Raycast(rb.position, new Vector2(transform.position.x + (lastMovement.x * dashDistance), transform.position.y + (lastMovement.y * dashDistance)), out hit, Mathf.Infinity, 7))
@@ -69,7 +79,7 @@ public class PlayerComponent : MonoBehaviour
         }
        */
         
-
+        
     }
     private void HandleDash()
     {
@@ -146,7 +156,7 @@ public class PlayerComponent : MonoBehaviour
 
     public void Dash(InputAction.CallbackContext context)
     {
-        if(isCoolDown == false && canIDash)
+        if(!isCoolDown)
             isDashing = true;
     }
     

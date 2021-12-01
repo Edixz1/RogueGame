@@ -7,6 +7,9 @@ public class EnnemieComponent : MonoBehaviour
     public float health = 10;
     public GameObject healthDrop;
     public GameObject[] ItemDrops;
+    private GameObject player;
+    private PlayerComponent compteur;
+
     public void TakeDomage(float damage)
     {
         health -= damage;
@@ -18,12 +21,14 @@ public class EnnemieComponent : MonoBehaviour
     }
     void Die()
     {
-        int random = Random.Range(0, 9);
+        player = GameObject.FindGameObjectWithTag("Player");
+        compteur = player.GetComponent<PlayerComponent>();
+        int random = Random.Range(0, 10);
         if (random == 0)
         {
             Instantiate(healthDrop, transform.position, Quaternion.identity);
         }
-        else if (random == 9)
+        else if (random == 9 && compteur.inventaire.Count <= 3)
         {
             Instantiate(ItemDrops[Random.Range(0,4)], transform.position, Quaternion.identity);
         }

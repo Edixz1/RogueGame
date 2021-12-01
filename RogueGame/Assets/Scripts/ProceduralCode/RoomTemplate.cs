@@ -51,7 +51,7 @@ public class RoomTemplate : MonoBehaviour
                 }
             }
         }
-        else
+        else if(waitTime>0)
         {
             waitTime -= Time.deltaTime;
         }
