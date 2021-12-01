@@ -131,18 +131,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2121884114504756778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2613887972266349992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40716e9fe75693d43bedd411701d1257, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2196532640454771317
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,6 +163,18 @@ Transform:
   m_Father: {fileID: 335147040528958154}
   m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2121884114504756778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2613887972266349992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40716e9fe75693d43bedd411701d1257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5346809571345540854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3080,7 +3080,7 @@ PrefabInstance:
     - target: {fileID: 3243354250272310849, guid: f2c8d4e3979d6f04480a10f5c737708f,
         type: 3}
       propertyPath: ObjectToSpawn.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3243354250272310849, guid: f2c8d4e3979d6f04480a10f5c737708f,
         type: 3}
@@ -3093,6 +3093,12 @@ PrefabInstance:
       propertyPath: ObjectToSpawn.Array.data[1]
       value: 
       objectReference: {fileID: 2122332344671467298, guid: 7e1b3f7e658bbd6438f14ea38e0073ee,
+        type: 3}
+    - target: {fileID: 3243354250272310849, guid: f2c8d4e3979d6f04480a10f5c737708f,
+        type: 3}
+      propertyPath: ObjectToSpawn.Array.data[2]
+      value: 
+      objectReference: {fileID: 8196659781328673223, guid: 2ba89d80897d5804694c768cf2c42dc7,
         type: 3}
     - target: {fileID: 3243354250272310850, guid: f2c8d4e3979d6f04480a10f5c737708f,
         type: 3}

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Pathfinding;
 public class RoomTemplate : MonoBehaviour
 {
@@ -17,18 +18,25 @@ public class RoomTemplate : MonoBehaviour
     private bool spawnedBoss;
     public GameObject bossRoom;
     public static GameObject bar;
-    public static GameObject victory;
+    private GameObject victory;
+    private Slider slide;
     //public GameObject bossCleaner;
     //public GameObject boss;
     private void Start()
     {
         bar = GameObject.FindGameObjectWithTag("BossBar");
+        slide = bar.GetComponent<Slider>();
         victory = GameObject.FindGameObjectWithTag("Victory");
         bar.SetActive(false);
         victory.SetActive(false);
     }
     private void Update()
     {
+        if (slide.value <= 0)
+        {
+            victory.SetActive(true);
+            Time.timeScale = 0;
+        }
 
         if(waitTime <= 0 && !spawnedBoss) 
         {

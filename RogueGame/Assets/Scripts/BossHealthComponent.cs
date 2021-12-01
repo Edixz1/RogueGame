@@ -30,7 +30,6 @@ public class BossHealthComponent : MonoBehaviour
     void Die()
     {
         RoomTemplate.bar.SetActive(false);
-        RoomTemplate.bar.SetActive(true);
 
         Destroy(gameObject,1f);
     }
