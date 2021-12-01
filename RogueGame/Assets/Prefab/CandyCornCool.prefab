@@ -129,7 +129,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
-  drop: {fileID: 6611946632673023858, guid: 7e8efc8f572c932448e1321b74d86b93, type: 3}
+  healthDrop: {fileID: 6611946632673023858, guid: 7e8efc8f572c932448e1321b74d86b93,
+    type: 3}
+  ItemDrops:
+  - {fileID: 3427984118371010343, guid: 825406f529377064b858c8540b7710b6, type: 3}
+  - {fileID: 2138082173597658685, guid: 1fbf91e14028dbf4e82460e796a78c06, type: 3}
+  - {fileID: 2620338355315879746, guid: 1581a6a0585211b4d84e9f05a027bebd, type: 3}
+  - {fileID: 1600818103797000159, guid: ce533f629a8f7c44c9db876c65f08656, type: 3}
 --- !u!114 &4448379429158942529
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -19,7 +19,7 @@ MonoBehaviour:
   maxHealthIncrease: 0
   heal: 0
   allowsFlight: 0
-  speedMultiplier: 1.1
+  speedMultiplier: 0.7
   sizeMultiplier: -0.1
   bulletSpeedMultiplier: 0
   bulletSizeMultiplier: 0

@@ -5,7 +5,8 @@ using UnityEngine;
 public class EnnemieComponent : MonoBehaviour
 {
     public float health = 10;
-    public GameObject drop;
+    public GameObject healthDrop;
+    public GameObject[] ItemDrops;
     public void TakeDomage(float damage)
     {
         health -= damage;
@@ -20,7 +21,11 @@ public class EnnemieComponent : MonoBehaviour
         int random = Random.Range(0, 9);
         if (random == 0)
         {
-            Instantiate(drop, transform.position, Quaternion.identity);
+            Instantiate(healthDrop, transform.position, Quaternion.identity);
+        }
+        else if (random == 9)
+        {
+            Instantiate(ItemDrops[Random.Range(0,4)], transform.position, Quaternion.identity);
         }
         Destroy(gameObject);
     }

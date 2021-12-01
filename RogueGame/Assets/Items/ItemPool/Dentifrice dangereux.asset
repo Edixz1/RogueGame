@@ -23,5 +23,5 @@ MonoBehaviour:
   sizeMultiplier: 0
   bulletSpeedMultiplier: 0
   bulletSizeMultiplier: 1.2
-  bulletDamageMultiplier: 1.5
+  bulletDamageMultiplier: 0.5
   fireRateMultiplier: -0.1
